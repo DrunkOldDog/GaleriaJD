@@ -134,7 +134,21 @@
                      <Key>oracle.jdevimpl.config.JProjectPaths</Key>
                      <Value class="oracle.jdevimpl.config.JProjectPaths">
                         <additionalClassPath>
-                           <entries class="[Ljava.net.URL;"/>
+                           <entries>
+                              <Item path="public_html/WEB-INF/lib/commons-beanutils.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-collections.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-dbcp.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-digester.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-fileupload.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-lang.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-logging.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-pool.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-resources.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-services.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/commons-validator.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/jakarta-oro.jar" jar-entry=""/>
+                              <Item path="public_html/WEB-INF/lib/struts.jar" jar-entry=""/>
+                           </entries>
                         </additionalClassPath>
                         <outputDirectory path="classes/"/>
                      </Value>
