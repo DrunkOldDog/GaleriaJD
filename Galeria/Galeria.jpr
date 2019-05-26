@@ -18,6 +18,9 @@
       <Item class="oracle.ide.model.DeployableTextNode">
          <URL path="src/mypackage1/ApplicationResources.properties"/>
       </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/ConnectDB.java"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>
