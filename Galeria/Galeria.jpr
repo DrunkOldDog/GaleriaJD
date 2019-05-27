@@ -22,7 +22,7 @@
          <URL path="src/mypackage1/ConnectDB.java"/>
       </Item>
       <Item class="oracle.jdeveloper.model.JspSourceNode">
-         <URL path="public_html/login.jsp"/>
+         <URL path="public_html/login.jsp" id="0"/>
          <encoding>windows-1252</encoding>
       </Item>
    </listOfChildren>
@@ -125,7 +125,7 @@
                         <programArguments class="java.lang.String"/>
                         <runActiveFile>true</runActiveFile>
                         <runDirectoryURL/>
-                        <targetURL/>
+                        <targetURL idref="0"/>
                         <useProxy>true</useProxy>
                      </Value>
                   </Item>
@@ -134,7 +134,7 @@
                      <Value class="oracle.jdevimpl.config.JProjectLibraries">
                         <jdkName>1.3.1_02</jdkName>
                         <jdkVersionNumber>1.3.1_02</jdkVersionNumber>
-                        <libraries>JDeveloper Runtime;JSP Runtime</libraries>
+                        <libraries>JDeveloper Runtime;JSP Runtime;Oracle JDBC</libraries>
                      </Value>
                   </Item>
                   <Item>
