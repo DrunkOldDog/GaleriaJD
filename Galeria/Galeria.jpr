@@ -22,7 +22,7 @@
          <URL path="src/mypackage1/ConnectDB.java"/>
       </Item>
       <Item class="oracle.jdeveloper.model.JspSourceNode">
-         <URL path="public_html/login.jsp" id="0"/>
+         <URL path="public_html/login.jsp"/>
          <encoding>windows-1252</encoding>
       </Item>
       <Item class="oracle.jdeveloper.model.JspSourceNode">
@@ -34,6 +34,12 @@
       </Item>
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage1/inicioAction.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/loginActionForm.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/loginAction.java"/>
       </Item>
    </listOfChildren>
    <ownerMap/>
@@ -135,7 +141,7 @@
                         <programArguments class="java.lang.String"/>
                         <runActiveFile>true</runActiveFile>
                         <runDirectoryURL/>
-                        <targetURL idref="0"/>
+                        <targetURL path="public_html/login.jsp"/>
                         <useProxy>true</useProxy>
                      </Value>
                   </Item>
