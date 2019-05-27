@@ -47,7 +47,7 @@ public class _login extends oracle.jsp.runtime.HttpJsp {
 
 
       out.write(__jsp_StaticText.text[0]);
-      /*@lineinfo:user-code*//*@lineinfo:14^1*/      out.print( new java.util.Date() );
+      /*@lineinfo:user-code*//*@lineinfo:15^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
       out.write(__jsp_StaticText.text[1]);
 
@@ -72,7 +72,7 @@ public class _login extends oracle.jsp.runtime.HttpJsp {
     static {
       try {
       text[0] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nThe current time is: \n</h2>\n<p>\n".toCharArray();
+      "\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nThe current time is: \n</h2>\n<p>\n".toCharArray();
       text[1] = 
       "</p>\n</body>\n</html>\n".toCharArray();
       }
