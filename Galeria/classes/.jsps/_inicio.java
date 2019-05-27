@@ -48,7 +48,7 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
 
       out.write(__jsp_StaticText.text[0]);
       out.write(__jsp_StaticText.text[1]);
-      /*@lineinfo:translated-code*//*@lineinfo:14^1*/      {
+      /*@lineinfo:translated-code*//*@lineinfo:15^1*/      {
         org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setAction("/inicio");
@@ -58,10 +58,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
           do {
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[2]);
-            /*@lineinfo:translated-code*//*@lineinfo:15^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_2=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:16^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_2=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setProperty("boton");
+              __jsp_taghandler_2.setStyleClass("btn btn-secondary");
               __jsp_taghandler_2.setValue("Clientes");
               __jsp_tag_starteval=__jsp_taghandler_2.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -77,10 +78,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[3]);
-            /*@lineinfo:translated-code*//*@lineinfo:16^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_3=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:17^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_3=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setProperty("boton");
+              __jsp_taghandler_3.setStyleClass("btn btn-secondary");
               __jsp_taghandler_3.setValue("Empleados");
               __jsp_tag_starteval=__jsp_taghandler_3.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -96,10 +98,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[4]);
-            /*@lineinfo:translated-code*//*@lineinfo:17^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_4=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:18^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_4=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setProperty("boton");
+              __jsp_taghandler_4.setStyleClass("btn btn-secondary");
               __jsp_taghandler_4.setValue("Artistas");
               __jsp_tag_starteval=__jsp_taghandler_4.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -115,10 +118,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[5]);
-            /*@lineinfo:translated-code*//*@lineinfo:18^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_5=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:19^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_5=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setProperty("boton");
+              __jsp_taghandler_5.setStyleClass("btn btn-secondary");
               __jsp_taghandler_5.setValue("Propietarios");
               __jsp_tag_starteval=__jsp_taghandler_5.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -134,10 +138,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[6]);
-            /*@lineinfo:translated-code*//*@lineinfo:19^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_6=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:20^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_6=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setProperty("boton");
+              __jsp_taghandler_6.setStyleClass("btn btn-secondary");
               __jsp_taghandler_6.setValue("Exposiciones");
               __jsp_tag_starteval=__jsp_taghandler_6.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -153,10 +158,11 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[7]);
-            /*@lineinfo:translated-code*//*@lineinfo:20^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_7=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property value");
+            /*@lineinfo:translated-code*//*@lineinfo:21^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_7=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setProperty("boton");
+              __jsp_taghandler_7.setStyleClass("btn btn-secondary");
               __jsp_taghandler_7.setValue("Obras");
               __jsp_tag_starteval=__jsp_taghandler_7.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
@@ -172,17 +178,37 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[8]);
-          /*@lineinfo:translated-code*//*@lineinfo:20^49*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            /*@lineinfo:translated-code*//*@lineinfo:22^3*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_8=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
+              __jsp_taghandler_8.setParent(__jsp_taghandler_1);
+              __jsp_taghandler_8.setProperty("boton");
+              __jsp_taghandler_8.setStyleClass("btn btn-secondary");
+              __jsp_taghandler_8.setValue("Compras");
+              __jsp_tag_starteval=__jsp_taghandler_8.doStartTag();
+              if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
+              {
+                out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_8,__jsp_tag_starteval,out);
+                do {
+                } while (__jsp_taghandler_8.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+              }
+              if (__jsp_taghandler_8.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                return;
+              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
+            }
+            /*@lineinfo:generated-code*/
+            out.write(__jsp_StaticText.text[9]);
+          /*@lineinfo:translated-code*//*@lineinfo:22^82*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[9]);
-      /*@lineinfo:user-code*//*@lineinfo:24^1*/      out.print( new java.util.Date() );
-      /*@lineinfo:generated-code*/
       out.write(__jsp_StaticText.text[10]);
+      /*@lineinfo:user-code*//*@lineinfo:26^1*/      out.print( new java.util.Date() );
+      /*@lineinfo:generated-code*/
+      out.write(__jsp_StaticText.text[11]);
 
 
     }
@@ -201,13 +227,13 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[11][];
+    private static final char text[][]=new char[12][];
     static {
       try {
       text[0] = 
       "\n".toCharArray();
       text[1] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nBienvenido!\n</h2>\n".toCharArray();
+      "\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nBienvenido!\n</h2>\n".toCharArray();
       text[2] = 
       "\n  ".toCharArray();
       text[3] = 
@@ -221,10 +247,12 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
       text[7] = 
       "\n  ".toCharArray();
       text[8] = 
-      "\n".toCharArray();
+      "\n  ".toCharArray();
       text[9] = 
-      "\n\n<p>\n".toCharArray();
+      "\n".toCharArray();
       text[10] = 
+      "\n\n<p>\n".toCharArray();
+      text[11] = 
       "</p>\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {
