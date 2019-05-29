@@ -9,6 +9,12 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class inicioAction extends Action 
 {
@@ -21,6 +27,7 @@ public class inicioAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
+  
     return mapping.findForward("success");
   }
 }

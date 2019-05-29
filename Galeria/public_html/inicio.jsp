@@ -10,7 +10,7 @@ Hello World
 </head>
 <body>
 <h2>
-Bienvenido!
+Bienvenido <%=session.getAttribute("persona")%>
 </h2>
 <html:form action="/inicio">
   <html:submit styleClass="btn btn-secondary" property="boton" value="Clientes" />

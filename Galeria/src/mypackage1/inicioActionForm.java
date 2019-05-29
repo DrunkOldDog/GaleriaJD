@@ -4,6 +4,12 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class inicioActionForm extends ActionForm 
 {

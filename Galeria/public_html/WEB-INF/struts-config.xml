@@ -7,7 +7,11 @@
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction"/>
-    <action path="/login"  name="loginActionForm"  type="mypackage1.loginAction"/>
+    <action path="/login"  type="mypackage1.loginAction" name="loginActionForm" scope="request">
+    <forward name="ok" path="/inicio.jsp"/>
+    <forward name="nook" path="/bad.jsp"/>
+    </action>
+    
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>
 </struts-config>

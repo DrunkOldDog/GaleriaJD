@@ -9,6 +9,14 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
+
+
 
 public class loginAction extends Action 
 {
@@ -21,6 +29,39 @@ public class loginAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-    return mapping.findForward("success");
+
+    loginActionForm ccc = (loginActionForm) form;
+    String nom =ccc.getUsuario();
+    String cod = ccc.getId();
+    request.getSession().setAttribute("persona",nom);
+    request.getSession().setAttribute("id",cod);
+
+
+
+        ConnectDB conn =new ConnectDB ();
+        ResultSet rsConsulta = null;
+
+
+    try
+    {
+    String cadena="select * from jd_empleado where username='"+nom+"'and idempleado="+cod+"";
+    System.out.println(cadena);
+    rsConsulta = conn.getData(cadena);
+    if (rsConsulta.next())
+       return mapping.findForward("ok");
+    else
+       return mapping.findForward("nook");
+	}
+	
+    catch(Exception e)
+    {
+      e.printStackTrace();
+      return (mapping.findForward("nook"));
+    }
+    finally
+    {
+      conn.closeConnection();	
+    }
+    
   }
 }
