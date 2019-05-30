@@ -65,7 +65,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setProperty("boton");
               __jsp_taghandler_2.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_2.setValue("Clientes");
+              __jsp_taghandler_2.setValue("Empleados");
               __jsp_tag_starteval=__jsp_taghandler_2.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -87,7 +87,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setProperty("boton");
               __jsp_taghandler_3.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_3.setValue("Empleados");
+              __jsp_taghandler_3.setValue("Artistas");
               __jsp_tag_starteval=__jsp_taghandler_3.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -109,7 +109,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setProperty("boton");
               __jsp_taghandler_4.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_4.setValue("Artistas");
+              __jsp_taghandler_4.setValue("Propietarios");
               __jsp_tag_starteval=__jsp_taghandler_4.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -131,7 +131,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setProperty("boton");
               __jsp_taghandler_5.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_5.setValue("Propietarios");
+              __jsp_taghandler_5.setValue("Exposiciones");
               __jsp_tag_starteval=__jsp_taghandler_5.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -153,7 +153,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setProperty("boton");
               __jsp_taghandler_6.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_6.setValue("Exposiciones");
+              __jsp_taghandler_6.setValue("Obras");
               __jsp_tag_starteval=__jsp_taghandler_6.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -175,7 +175,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setProperty("boton");
               __jsp_taghandler_7.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_7.setValue("Obras");
+              __jsp_taghandler_7.setValue("Compras");
               __jsp_tag_starteval=__jsp_taghandler_7.doStartTag();
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
@@ -192,39 +192,17 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[10]);
-            /*@lineinfo:translated-code*//*@lineinfo:22^3*/            {
-              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_8=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
-              __jsp_taghandler_8.setParent(__jsp_taghandler_1);
-              __jsp_taghandler_8.setProperty("boton");
-              __jsp_taghandler_8.setStyleClass("btn btn-secondary");
-              __jsp_taghandler_8.setValue("Compras");
-              __jsp_tag_starteval=__jsp_taghandler_8.doStartTag();
-              if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
-              {
-                out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_8,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
-                do {
-                } while (__jsp_taghandler_8.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
-                out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
-              }
-              if (__jsp_taghandler_8.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
-                return;
-              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
-            }
-            /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[11]);
-          /*@lineinfo:translated-code*//*@lineinfo:22^82*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+          /*@lineinfo:translated-code*//*@lineinfo:21^82*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[12]);
-      /*@lineinfo:user-code*//*@lineinfo:26^1*/      out.print( new java.util.Date() );
+      __ojsp_s_out.write(__jsp_StaticText.text[11]);
+      /*@lineinfo:user-code*//*@lineinfo:25^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[13]);
+      __ojsp_s_out.write(__jsp_StaticText.text[12]);
 
 
     }
@@ -243,7 +221,7 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
 
   }
   private static class __jsp_StaticText {
-    private static final byte text[][]=new byte[14][];
+    private static final byte text[][]=new byte[13][];
     static {
       try {
       text[0] = 
@@ -267,12 +245,10 @@ public class _inicio extends com.orionserver.http.OrionHttpJspPage {
       text[9] = 
       "\r\n  ".getBytes("Cp1252");
       text[10] = 
-      "\r\n  ".getBytes("Cp1252");
-      text[11] = 
       "\r\n".getBytes("Cp1252");
-      text[12] = 
+      text[11] = 
       "\r\n\r\n<p>\r\n".getBytes("Cp1252");
-      text[13] = 
+      text[12] = 
       "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {

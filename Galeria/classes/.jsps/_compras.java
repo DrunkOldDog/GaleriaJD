@@ -209,7 +209,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[13]);
-            /*@lineinfo:translated-code*//*@lineinfo:33^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:34^1*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_10=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_10.setParent(__jsp_taghandler_1);
               __jsp_taghandler_10.setKey("fecha.promp");
@@ -225,7 +225,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[14]);
-            /*@lineinfo:translated-code*//*@lineinfo:34^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:35^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_11=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property readonly value");
               __jsp_taghandler_11.setParent(__jsp_taghandler_1);
               __jsp_taghandler_11.setProperty("fecha");
@@ -247,7 +247,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[15]);
-            /*@lineinfo:translated-code*//*@lineinfo:35^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:36^1*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_12=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_12.setParent(__jsp_taghandler_1);
               __jsp_taghandler_12.setKey("obra.promp");
@@ -263,7 +263,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[16]);
-            /*@lineinfo:translated-code*//*@lineinfo:36^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:37^1*/            {
               org.apache.struts.taglib.html.SelectTag __jsp_taghandler_13=(org.apache.struts.taglib.html.SelectTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SelectTag.class,"org.apache.struts.taglib.html.SelectTag property");
               __jsp_taghandler_13.setParent(__jsp_taghandler_1);
               __jsp_taghandler_13.setProperty("obras");
@@ -275,7 +275,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
                 do {
                   /*@lineinfo:generated-code*/
                   __ojsp_s_out.write(__jsp_StaticText.text[17]);
-                  /*@lineinfo:translated-code*//*@lineinfo:37^11*/                  {
+                  /*@lineinfo:translated-code*//*@lineinfo:38^11*/                  {
                     org.apache.struts.taglib.html.OptionsTag __jsp_taghandler_14=(org.apache.struts.taglib.html.OptionsTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.OptionsTag.class,"org.apache.struts.taglib.html.OptionsTag collection labelProperty property");
                     __jsp_taghandler_14.setParent(__jsp_taghandler_13);
                     __jsp_taghandler_14.setCollection("ayuda");
@@ -293,7 +293,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
                   }
                   /*@lineinfo:generated-code*/
                   __ojsp_s_out.write(__jsp_StaticText.text[18]);
-                /*@lineinfo:translated-code*//*@lineinfo:37^86*/                } while (__jsp_taghandler_13.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                /*@lineinfo:translated-code*//*@lineinfo:38^86*/                } while (__jsp_taghandler_13.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
                 __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
@@ -303,17 +303,38 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
             }
             /*@lineinfo:generated-code*/
             __ojsp_s_out.write(__jsp_StaticText.text[19]);
-          /*@lineinfo:translated-code*//*@lineinfo:38^15*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            /*@lineinfo:translated-code*//*@lineinfo:41^1*/            {
+              org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_15=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag styleClass value");
+              __jsp_taghandler_15.setParent(__jsp_taghandler_1);
+              __jsp_taghandler_15.setStyleClass("btn btn-success");
+              __jsp_taghandler_15.setValue("Realizar Compra");
+              __jsp_tag_starteval=__jsp_taghandler_15.doStartTag();
+              if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
+              {
+                out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_15,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
+                do {
+                } while (__jsp_taghandler_15.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
+              }
+              if (__jsp_taghandler_15.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                return;
+              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_15);
+            }
+            /*@lineinfo:generated-code*/
+            __ojsp_s_out.write(__jsp_StaticText.text[20]);
+          /*@lineinfo:translated-code*//*@lineinfo:41^69*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[20]);
-      /*@lineinfo:user-code*//*@lineinfo:41^1*/      out.print( new java.util.Date() );
-      /*@lineinfo:generated-code*/
       __ojsp_s_out.write(__jsp_StaticText.text[21]);
+      /*@lineinfo:user-code*//*@lineinfo:44^1*/      out.print( new java.util.Date() );
+      /*@lineinfo:generated-code*/
+      __ojsp_s_out.write(__jsp_StaticText.text[22]);
 
 
     }
@@ -332,7 +353,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
 
   }
   private static class __jsp_StaticText {
-    private static final byte text[][]=new byte[22][];
+    private static final byte text[][]=new byte[23][];
     static {
       try {
       text[0] = 
@@ -362,7 +383,7 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
       text[12] = 
       "\r\n".getBytes("Cp1252");
       text[13] = 
-      "\r\n<h4>Datos Compra</h4>\r\n".getBytes("Cp1252");
+      "\r\n<p></p>\r\n<h4>Datos Compra</h4>\r\n".getBytes("Cp1252");
       text[14] = 
       "\r\n".getBytes("Cp1252");
       text[15] = 
@@ -374,10 +395,12 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
       text[18] = 
       "\r\n".getBytes("Cp1252");
       text[19] = 
-      "\r\n".getBytes("Cp1252");
+      "\r\n<p></p>\r\n".getBytes("Cp1252");
       text[20] = 
-      "\r\n<p>\r\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[21] = 
+      "\r\n<p>\r\n".getBytes("Cp1252");
+      text[22] = 
       "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {

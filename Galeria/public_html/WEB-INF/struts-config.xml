@@ -16,7 +16,10 @@
     <forward name="nook" path="/bad.jsp"/>
     </action>
     <action path="/clientes" type="mypackage1.clientesAction"/>
-    <action path="/compras" name="comprasActionForm" type="mypackage1.comprasAction"/>
+    <action path="/compras" name="comprasActionForm" type="mypackage1.comprasAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
     
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>

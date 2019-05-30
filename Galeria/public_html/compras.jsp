@@ -29,6 +29,7 @@ Formulario de Compra
 <html:text property="ci" />
 <bean:message key="fec_nac.promp" />
 <html:text property="fec_nac" />
+<p></p>
 <h4>Datos Compra</h4>
 <bean:message key="fecha.promp" />
 <html:text property="fecha" value="<%=dateFormat.format(cal.getTime())%>" readonly="TRUE" />
@@ -36,6 +37,8 @@ Formulario de Compra
 <html:select property="obras">
           <html:options collection="ayuda" property="codigo" labelProperty="descr" />
 </html:select>
+<p></p>
+<html:submit styleClass="btn btn-success" value="Realizar Compra" />
 </html:form>
 <p>
 <%= new java.util.Date() %></p>
