@@ -6,10 +6,12 @@
     <form-bean name="loginActionForm" type="mypackage1.loginActionForm"/>
     <form-bean name="clientesActionForm" type="mypackage1.clientesActionForm"/>
     <form-bean name="comprasActionForm" type="mypackage1.comprasActionForm"/>
+    <form-bean name="ventasActionForm" type="mypackage1.ventasActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
       <forward name="compras" path="/compras.jsp"/>
+      <forward name="ventas" path="/ventas.jsp"/>
     </action>
     <action path="/login" type="mypackage1.loginAction" name="loginActionForm" scope="request">
     <forward name="ok" path="/inicio.jsp"/>
@@ -20,6 +22,7 @@
       <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
+    <action path="/ventas" name="ventasActionForm" type="mypackage1.ventasAction"/>
     
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>
