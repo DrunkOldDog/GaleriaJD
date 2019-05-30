@@ -44,7 +44,7 @@ public class inicioAction extends Action
         {
           ClaseDep item = new ClaseDep();
           item.setCodigo(rsConsulta.getString("idobra"));
-          item.setDescr(rsConsulta.getString("titulo"));
+          item.setDescr(rsConsulta.getString("titulo")+" ("+rsConsulta.getString("precio")+"Bs.)");
           items.add(item);
           System.out.println("Paso ..");
       }  

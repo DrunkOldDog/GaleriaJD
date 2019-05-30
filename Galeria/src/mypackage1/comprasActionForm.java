@@ -9,6 +9,10 @@ public class comprasActionForm extends ActionForm
 {
   String fecha;
   String obras;
+  String nombre;
+  String apellido;
+  String ci;
+  String fec_nac;
 
   /**
    * Reset all properties to their default values.
@@ -49,5 +53,45 @@ public class comprasActionForm extends ActionForm
   public void setObras(String newObras)
   {
     obras = newObras;
+  }
+
+  public String getNombre()
+  {
+    return nombre;
+  }
+
+  public void setNombre(String newNombre)
+  {
+    nombre = newNombre;
+  }
+
+  public String getApellido()
+  {
+    return apellido;
+  }
+
+  public void setApellido(String newApellido)
+  {
+    apellido = newApellido;
+  }
+
+  public String getCi()
+  {
+    return ci;
+  }
+
+  public void setCi(String newCi)
+  {
+    ci = newCi;
+  }
+
+  public String getFec_nac()
+  {
+    return fec_nac;
+  }
+
+  public void setFec_nac(String newFec_nac)
+  {
+    fec_nac = newFec_nac;
   }
 }
