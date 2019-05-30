@@ -40,20 +40,32 @@ public class comprasAction extends Action
     Connection cn = null;
     ConnectDB conn =new ConnectDB();
     ResultSet rsConsulta = null;
+    ResultSet rsConsulta2 = null;
 
        try
        {
          cn = conn.conexion;
 
-        String cadena="SELECT * FROM jd_cliente WHERE IDCLIENTE = (SELECT MAX(IDCLIENTE) FROM jd_cliente)";
+        String cadena="SELECT * FROM jd_cliente WHERE CI = '"+ci+"'";
         System.out.println(cadena);
         rsConsulta = conn.getData(cadena);
         if (rsConsulta.next()){
-           valorc = Integer.parseInt(rsConsulta.getString("IDCLIENTE"))+1;
+           valorc = Integer.parseInt(rsConsulta.getString("IDCLIENTE"));
+           System.out.println(valorc);
+           cadena = "update jd_cliente SET NOMBRE='"+nom+"', APELLIDO='"+ape+"', FEC_NAC=TO_DATE('"+fen+"','DD/MM/YYYY') WHERE IDCLIENTE="+valorc;
+           System.out.println(cadena);
+           int a = conn.InsertaDatos(cadena);
+        }else{
+        cadena="SELECT * FROM jd_cliente WHERE IDCLIENTE = (SELECT MAX(IDCLIENTE) FROM jd_cliente)";
+        System.out.println(cadena);
+        rsConsulta2 = conn.getData(cadena);
+        if (rsConsulta2.next()){
+           valorc = Integer.parseInt(rsConsulta2.getString("IDCLIENTE"))+1;
            System.out.println(valorc);
            cadena = "insert into jd_cliente values ("+valorc+",'"+nom+"','"+ape+"','"+ci+"',TO_DATE('"+fen+"','DD/MM/YYYY'))";
            System.out.println(cadena);
            int a = conn.InsertaDatos(cadena);
+        }
         }
 
         cadena="SELECT * FROM JD_OBRA WHERE IDOBRA = "+obr;
