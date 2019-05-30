@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=windows-1252"%>
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Login

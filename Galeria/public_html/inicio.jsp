@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=windows-1252"%>
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Hello World
@@ -10,7 +10,7 @@ Hello World
 </head>
 <body>
 <h2>
-Bienvenido <%=session.getAttribute("persona")%>
+Bienvenido <%=session.getAttribute("fn")%>&nbsp;<%=session.getAttribute("ln")%>
 </h2>
 <html:form action="/inicio">
   <html:submit styleClass="btn btn-secondary" property="boton" value="Clientes" />

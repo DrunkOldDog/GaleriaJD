@@ -47,10 +47,13 @@ public class loginAction extends Action
     String cadena="select * from jd_empleado where username='"+nom+"'and idempleado="+cod+"";
     System.out.println(cadena);
     rsConsulta = conn.getData(cadena);
-    if (rsConsulta.next())
+    if (rsConsulta.next()){
+       request.getSession().setAttribute("fn",rsConsulta.getString("NOMBRE"));
+       request.getSession().setAttribute("ln",rsConsulta.getString("APELLIDO"));
        return mapping.findForward("ok");
-    else
+    }else{
        return mapping.findForward("nook");
+    }
 	}
 	
     catch(Exception e)

@@ -195,7 +195,7 @@ public class _login extends oracle.jsp.runtime.HttpJsp {
       text[1] = 
       "\n".toCharArray();
       text[2] = 
-      "\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nLogin\n</title>\n</head>\n<body>\n\n".toCharArray();
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nLogin\n</title>\n</head>\n<body>\n\n".toCharArray();
       text[3] = 
       "\n<table class=\"table table-hover\">\n<tr>\n    <td colspan=\"2\">".toCharArray();
       text[4] = 
