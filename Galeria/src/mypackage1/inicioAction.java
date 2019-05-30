@@ -27,7 +27,42 @@ public class inicioAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-  
+    inicioActionForm abm = (inicioActionForm) form;
+    String boton = abm.getBoton();
+
+    if (boton.equals("Compras")) {
+      Connection cn = null;
+      ConnectDB conn =new ConnectDB();
+      ResultSet rsConsulta = null;
+      try
+      {
+        cn = conn.conexion;
+        String cadena = "select * from jd_obra order by 1";
+        rsConsulta = conn.getData(cadena);
+        ArrayList items = new ArrayList();
+        while (rsConsulta.next())
+        {
+          ClaseDep item = new ClaseDep();
+          item.setCodigo(rsConsulta.getString("idobra"));
+          item.setDescr(rsConsulta.getString("titulo"));
+          items.add(item);
+          System.out.println("Paso ..");
+      }  
+      request.getSession().setAttribute("ayuda",items);
+      return mapping.findForward("compras");
+    }
+	
+      catch(Exception e)
+      {
+        e.printStackTrace();
+        return (mapping.findForward("mala"));
+      }
+      finally
+      {
+        conn.closeConnection();	
+      }
+  }else{
     return mapping.findForward("success");
+  }
   }
 }

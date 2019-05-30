@@ -4,16 +4,11 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
-import java.sql.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.naming.NamingException;
-import oracle.jdbc.*;
-import java.util.*;
 
-public class inicioActionForm extends ActionForm 
+public class comprasActionForm extends ActionForm 
 {
-  String boton;
+  String fecha;
+  String obras;
 
   /**
    * Reset all properties to their default values.
@@ -36,13 +31,23 @@ public class inicioActionForm extends ActionForm
     return super.validate(mapping, request);
   }
 
-  public String getBoton()
+  public String getFecha()
   {
-    return boton;
+    return fecha;
   }
 
-  public void setBoton(String newBoton)
+  public void setFecha(String newFecha)
   {
-    boton = newBoton;
+    fecha = newFecha;
+  }
+
+  public String getObras()
+  {
+    return obras;
+  }
+
+  public void setObras(String newObras)
+  {
+    obras = newObras;
   }
 }
