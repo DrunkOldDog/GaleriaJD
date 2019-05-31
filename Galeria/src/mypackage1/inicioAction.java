@@ -30,6 +30,46 @@ public class inicioAction extends Action
     inicioActionForm abm = (inicioActionForm) form;
     String boton = abm.getBoton();
 
+  if (boton.equals("Exposiciones"))
+  {
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+    try
+    {
+      cn = conn.conexion;
+      String cadena = "Select IDEXPOSICION,titulo,descripcion,fec_ini,fec_cie from jd_exposicion order by 1";
+      rsConsulta = conn.getData(cadena);
+      ArrayList items = new ArrayList();
+      while (rsConsulta.next())
+      {
+        ClaseExp item = new ClaseExp();
+        item.setId(rsConsulta.getString("IDEXPOSICION"));
+        item.setTitulo(rsConsulta.getString("titulo"));
+        item.setDescr(rsConsulta.getString("descripcion"));
+        item.setFecha_ini(rsConsulta.getString("fec_ini"));
+        item.setFecha_cierre(rsConsulta.getString("fec_cie"));
+        items.add(item);
+        System.out.println("Paso ..");
+    }
+    expoActionForm f = new expoActionForm ();	   
+    f.setTabla(items);
+    request.getSession().setAttribute("nn",f);
+    return mapping.findForward("expos");
+	}
+	
+    catch(Exception e)
+    {
+      e.printStackTrace();
+      return (mapping.findForward("mal"));
+    }
+    finally
+    {
+      conn.closeConnection();	
+    }
+  }
+
+
     if (boton.equals("Compras")) {
       Connection cn = null;
       ConnectDB conn =new ConnectDB();
@@ -124,5 +164,9 @@ public class inicioAction extends Action
   }else{
     return mapping.findForward("success");
   }
+
+ 
+  
+  
   }
 }
