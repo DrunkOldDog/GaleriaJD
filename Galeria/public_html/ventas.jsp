@@ -19,24 +19,22 @@ Listado de Ventas
     <tr>
       <th scope="col">#ID</th>
       <th scope="col">Fecha</th>
+      <th scope="col">Hora</th>
       <th scope="col">Total</th>
       <th scope="col">Nombre Cliente</th>
-      <th scope="col">Apellido Cliente</th>
       <th scope="col">Obra</th>
       <th scope="col">Nombre Empleado</th>
-      <th scope="col">Apellido Empleado</th>
     </tr>
   </thead>
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
             <tr>
               <td><bean:write name="tabla" property="idcompra"/></td>
               <td><bean:write name="tabla" property="fecha" /></td>
+              <td><bean:write name="tabla" property="apecli" /></td>
               <td><bean:write name="tabla" property="total" /></td>
               <td><bean:write name="tabla" property="nomcli" /></td>
-              <td><bean:write name="tabla" property="apecli" /></td>
               <td><bean:write name="tabla" property="nomobr" /></td>
               <td><bean:write name="tabla" property="nomemp" /></td>
-              <td><bean:write name="tabla" property="apeemp" /></td>
             </tr>
   </logic:iterate>
   </table>

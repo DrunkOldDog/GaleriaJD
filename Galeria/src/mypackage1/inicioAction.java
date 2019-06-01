@@ -104,15 +104,12 @@ public class inicioAction extends Action
   }else if(boton.equals("Ventas")) {
     Connection cn = null;
     ConnectDB conn =new ConnectDB();
-    ConnectDB conn2 =new ConnectDB();
     ResultSet rsConsulta = null;
-    ResultSet rsConsulta2 = null;
     
     try
     {
       cn = conn.conexion;
-      cn = conn2.conexion;
-      String cadena = "select * from jd_compra order by 1";
+      String cadena = "select a.idcompra, TO_CHAR(a.fecha,'DD/MM/YYYY') as FECHA, TO_CHAR(a.fecha,'hh24:mi:ss') as HORA, a.total, b.nombre, b.apellido, c.titulo from jd_compra a, jd_cliente b, jd_obra c where a.idcliente = b.idcliente and c.idobra = a.idobra order by 1";
       rsConsulta = conn.getData(cadena);
       System.out.println(cadena);
       ArrayList items = new ArrayList();
@@ -121,27 +118,13 @@ public class inicioAction extends Action
         ClaseDep item = new ClaseDep();
         item.setIdcompra(rsConsulta.getString("IDCOMPRA"));
         item.setFecha(rsConsulta.getString("FECHA"));
+        item.setApecli(rsConsulta.getString("HORA"));
         item.setTotal(rsConsulta.getString("TOTAL"));
-        String auxiliar = rsConsulta.getString("IDOBRA").toString();
-        cadena = "select * from jd_cliente where IDCLIENTE="+rsConsulta.getString("IDCLIENTE");
-        rsConsulta2 = conn2.getData(cadena);
-        System.out.println(cadena);
-        if(rsConsulta2.next()){
-          item.setNomcli(rsConsulta2.getString("NOMBRE"));
-          item.setApecli(rsConsulta2.getString("APELLIDO"));
-        }
-
-        cadena = "select * from jd_obra where IDOBRA="+auxiliar;
-        rsConsulta2 = conn2.getData(cadena);
-        System.out.println(cadena);
-        if(rsConsulta2.next()){
-          item.setNomobr(rsConsulta2.getString("TITULO"));
-        }
-        
+        item.setNomcli(rsConsulta.getString("NOMBRE")+" "+rsConsulta.getString("APELLIDO"));
+        item.setNomobr(rsConsulta.getString("TITULO"));
         String nome = request.getSession().getAttribute("fn").toString();
         String apee = request.getSession().getAttribute("ln").toString();
-        item.setNomemp(nome);
-        item.setApeemp(apee);
+        item.setNomemp(nome+" "+apee);
         items.add(item);
         System.out.println("Paso ..");
     }
@@ -159,7 +142,6 @@ public class inicioAction extends Action
     finally
     {
       conn.closeConnection();	
-      conn2.closeConnection();	
     }
   }else{
     return mapping.findForward("success");
