@@ -12,8 +12,7 @@
     <form-bean name="editexpActionForm" type="mypackage1.editexpActionForm"/>
     <form-bean name="agregarexpActionForm" type="mypackage1.agregarexpActionForm"/>
     <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
-    <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
-    <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
+    <form-bean name="addobraActionForm" type="mypackage1.addobraActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
@@ -48,6 +47,14 @@
     </action>
     <action path="/agregarexp" name="agregarexpActionForm" type="mypackage1.agregarexpAction">
      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/obras" name="obrasActionForm" type="mypackage1.obrasAction">
+      <forward name="addobras" path="/addobra.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/addobra" name="addobraActionForm" type="mypackage1.addobraAction">
+      <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
 

@@ -1,3 +1,4 @@
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ page contentType="text/html;charset=windows-1252"%>
@@ -43,6 +44,11 @@ Hello World
   </logic:iterate>
   </table>
 </html:form>
+<html:form action="/obras">
+  <html:submit styleClass="btn btn-primary" property="boton" value="Add" />
+  <html:submit styleClass="btn btn-primary" property="boton" value="Editar" />
+</html:form>
+
 <p>
 <%= new java.util.Date() %></p>
 </body>

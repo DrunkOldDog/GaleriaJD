@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class obrasActionForm extends ActionForm 
 {
   ArrayList tabla;
+  String boton;
 
   /**
    * Reset all properties to their default values.
@@ -39,5 +40,15 @@ public class obrasActionForm extends ActionForm
   public void setTabla(ArrayList newTabla)
   {
     tabla = newTabla;
+  }
+
+  public String getBoton()
+  {
+    return boton;
+  }
+
+  public void setBoton(String newBoton)
+  {
+    boton = newBoton;
   }
 }
