@@ -38,7 +38,7 @@ public class inicioAction extends Action
     try
     {
       cn = conn.conexion;
-      String cadena = "Select IDEXPOSICION,titulo,descripcion,fec_ini,fec_cie from jd_exposicion order by 1";
+      String cadena = "Select IDEXPOSICION,titulo,descripcion,TO_CHAR(fec_ini,'DD/MM/YYYY') as fec_ini,TO_CHAR(fec_cie,'DD/MM/YYYY') as fec_cie from jd_exposicion order by 1";
       rsConsulta = conn.getData(cadena);
       ArrayList items = new ArrayList();
       while (rsConsulta.next())
