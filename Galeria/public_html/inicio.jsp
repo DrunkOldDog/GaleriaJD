@@ -15,7 +15,6 @@ Bienvenido <%=session.getAttribute("fn")%>&nbsp;<%=session.getAttribute("ln")%>
 <html:form action="/inicio">
   <html:submit styleClass="btn btn-secondary" property="boton" value="Empleados" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Artistas" />
-  <html:submit styleClass="btn btn-secondary" property="boton" value="Propietarios" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Exposiciones" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Obras" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Compras" />

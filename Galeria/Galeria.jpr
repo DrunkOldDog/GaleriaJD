@@ -107,6 +107,13 @@
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage1/agregarexpAction.java"/>
       </Item>
+      <Item class="oracle.jdeveloper.model.JspSourceNode">
+         <URL path="public_html/obras.jsp"/>
+         <encoding>windows-1252</encoding>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/obrasActionForm.java"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>

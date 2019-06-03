@@ -11,12 +11,16 @@
     <form-bean name="editarexpActionForm" type="mypackage1.editarexpActionForm"/>
     <form-bean name="editexpActionForm" type="mypackage1.editexpActionForm"/>
     <form-bean name="agregarexpActionForm" type="mypackage1.agregarexpActionForm"/>
+    <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
+    <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
+    <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
       <forward name="compras" path="/compras.jsp"/>
       <forward name="ventas" path="/ventas.jsp"/>
       <forward name="expos" path="/expo.jsp"/>
+      <forward name="obras" path="/obras.jsp"/>
     </action>
     <action path="/login" type="mypackage1.loginAction" name="loginActionForm" scope="request">
     <forward name="ok" path="/inicio.jsp"/>
