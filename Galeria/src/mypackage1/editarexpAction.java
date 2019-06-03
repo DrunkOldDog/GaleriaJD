@@ -35,7 +35,7 @@ public class editarexpAction extends Action
     try
     {
       cn = conn.conexion;
-      String cadena = "select * from jd_exposicion where idexposicion='"+cod+"'";
+      String cadena = "select idexposicion,titulo,descripcion,TO_CHAR(fec_ini,'DD/MM/YYYY') as fec_ini,TO_CHAR(fec_cie,'DD/MM/YYYY') as fec_cie from jd_exposicion where idexposicion='"+cod+"'";
       System.out.println(cadena);
       rsConsulta = conn.getData(cadena);
       if (rsConsulta.next())
