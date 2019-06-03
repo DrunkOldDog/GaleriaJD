@@ -4,12 +4,14 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 
-public class expoActionForm extends ActionForm 
+public class editexpActionForm extends ActionForm 
 {
-  ArrayList tabla;
   String id;
+  String titulo;
+  String descr;
+  String fecha_ini;
+  String fecha_fin;
 
   /**
    * Reset all properties to their default values.
@@ -32,18 +34,6 @@ public class expoActionForm extends ActionForm
     return super.validate(mapping, request);
   }
 
-  public ArrayList getTabla()
-  {
-    return tabla;
-  }
-
-  public void setTabla(ArrayList newTabla)
-  {
-    tabla = newTabla;
-  }
-
-
-
   public String getId()
   {
     return id;
@@ -54,6 +44,43 @@ public class expoActionForm extends ActionForm
     id = newId;
   }
 
+  public String getTitulo()
+  {
+    return titulo;
+  }
 
+  public void setTitulo(String newTitulo)
+  {
+    titulo = newTitulo;
+  }
 
+  public String getDescr()
+  {
+    return descr;
+  }
+
+  public void setDescr(String newDescr)
+  {
+    descr = newDescr;
+  }
+
+  public String getFecha_ini()
+  {
+    return fecha_ini;
+  }
+
+  public void setFecha_ini(String newFecha_ini)
+  {
+    fecha_ini = newFecha_ini;
+  }
+
+  public String getFecha_fin()
+  {
+    return fecha_fin;
+  }
+
+  public void setFecha_fin(String newFecha_fin)
+  {
+    fecha_fin = newFecha_fin;
+  }
 }

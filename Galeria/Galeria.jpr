@@ -77,6 +77,36 @@
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage1/expoAction.java"/>
       </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/editarexpAction.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/editarexpActionForm.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JspSourceNode">
+         <URL path="public_html/editarexp.jsp"/>
+         <encoding>windows-1252</encoding>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JspSourceNode">
+         <URL path="public_html/editexp.jsp"/>
+         <encoding>windows-1252</encoding>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/editexpActionForm.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/editexpAction.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JspSourceNode">
+         <URL path="public_html/agregarexp.jsp"/>
+         <encoding>windows-1252</encoding>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/agregarexpActionForm.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/agregarexpAction.java"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>

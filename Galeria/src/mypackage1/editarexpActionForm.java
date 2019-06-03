@@ -4,12 +4,10 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 
-public class expoActionForm extends ActionForm 
+public class editarexpActionForm extends ActionForm 
 {
-  ArrayList tabla;
-  String id;
+  String cod;
 
   /**
    * Reset all properties to their default values.
@@ -32,28 +30,13 @@ public class expoActionForm extends ActionForm
     return super.validate(mapping, request);
   }
 
-  public ArrayList getTabla()
+  public String getCod()
   {
-    return tabla;
+    return cod;
   }
 
-  public void setTabla(ArrayList newTabla)
+  public void setCod(String newCod)
   {
-    tabla = newTabla;
+    cod = newCod;
   }
-
-
-
-  public String getId()
-  {
-    return id;
-  }
-
-  public void setId(String newId)
-  {
-    id = newId;
-  }
-
-
-
 }

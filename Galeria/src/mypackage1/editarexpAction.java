@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
-public class expoAction extends Action 
+public class editarexpAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -26,37 +26,39 @@ public class expoAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-      expoActionForm cod = (expoActionForm) form;
-      String codigo = cod.getId();
-     System.out.println("editame"+codigo);
+        editarexpActionForm cc = (editarexpActionForm) form;
+      String cod = cc.getCod();
 
-     Connection cn = null;
+       Connection cn = null;
     ConnectDB conn =new ConnectDB();
     ResultSet rsConsulta = null;
-
-       try
-       {
-         cn = conn.conexion;
-         String cadena = "delete from jd_expobra where idexposicion ="+codigo+"";
-         System.out.println(cadena);
-         int a = conn.InsertaDatos(cadena);
-         String cadenab = "delete from jd_exposicion where idexposicion ="+codigo+"";
-         System.out.println(cadenab);
-         int b = conn.InsertaDatos(cadenab);
-         return mapping.findForward("bueno");
-	      }
-	
-        catch(Exception e)
-       {
-          e.printStackTrace();
-          return (mapping.findForward("malo"));
-       }
-       
+    try
+    {
+      cn = conn.conexion;
+      String cadena = "select * from jd_exposicion where idexposicion='"+cod+"'";
+      System.out.println(cadena);
+      rsConsulta = conn.getData(cadena);
+      if (rsConsulta.next())
+      {
+        request.getSession().setAttribute("codigo",rsConsulta.getString("idexposicion")); 
+        request.getSession().setAttribute("nombre",rsConsulta.getString("titulo")); 
+        request.getSession().setAttribute("descr",rsConsulta.getString("descripcion")); 
+        request.getSession().setAttribute("fecha_ini",rsConsulta.getString("fec_ini")); 
+        request.getSession().setAttribute("fecha_fin",rsConsulta.getString("fec_cie"));
+        return mapping.findForward("editarex");
+      }
+      else
+       return mapping.findForward("malo");
+    }
+    catch(Exception e)
+    {
+      e.printStackTrace();
+      return (mapping.findForward("malo"));
+    }
     finally
     {
-    conn.closeConnection();	
+      conn.closeConnection();	
+    }
 
-  }
-      
   }
 }

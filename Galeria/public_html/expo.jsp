@@ -22,7 +22,7 @@ Exposiciones
       <th scope="col">Descripcion</th>
       <th scope="col">Fecha de Inicio</th>
       <th scope="col">Fecha de Cierre</th>
-       <th scope="col">Acciones</th>
+       <th scope="col">ID (Click para eliminar)</th>
     </tr>
   </thead>
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
@@ -31,18 +31,16 @@ Exposiciones
               <td><bean:write name="tabla" property="descr" /></td>
               <td><bean:write name="tabla" property="fecha_ini" /></td>
               <td><bean:write name="tabla" property="fecha_cierre" /></td>
-              <td><html:submit property="editar" value="Editar" styleClass="btn btn-info">
+              <td><center><html:submit property="id" styleClass="btn btn-danger">
               <bean:write name="tabla" property="id" />
-              </html:submit></td>
-              <td><html:submit property="editar" styleClass="btn btn-danger">
-              
-              <bean:write name="tabla" property="id" />
-              </html:submit></td>
-
-              
+              </html:submit></center></td>
             </tr>
   </logic:iterate>
   </table>
 </html:form>
+<br>
+<center><h5>
+Editar Exposicion: <a class="btn btn-primary" href="editarexp.jsp" role="button">Editar</a> Agregar Exposicion: <a class="btn btn-success" href="agregarexp.jsp" role="button">Agregar</a>
+</h5>
 </body>
 </html>

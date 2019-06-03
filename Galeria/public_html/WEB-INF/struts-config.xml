@@ -8,6 +8,9 @@
     <form-bean name="comprasActionForm" type="mypackage1.comprasActionForm"/>
     <form-bean name="ventasActionForm" type="mypackage1.ventasActionForm"/>
     <form-bean name="expoActionForm" type="mypackage1.expoActionForm"/>
+    <form-bean name="editarexpActionForm" type="mypackage1.editarexpActionForm"/>
+    <form-bean name="editexpActionForm" type="mypackage1.editexpActionForm"/>
+    <form-bean name="agregarexpActionForm" type="mypackage1.agregarexpActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
@@ -25,8 +28,25 @@
       <forward name="malo" path="/bad.jsp"/>
     </action>
     <action path="/ventas" name="ventasActionForm" type="mypackage1.ventasAction"/>
-    <action path="/exp" name="expoActionForm" type="mypackage1.expoAction"/>
+    <action path="/exp" name="expoActionForm" type="mypackage1.expoAction">
+     <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+
     
+    <action path="/editarexp" name="editarexpActionForm" type="mypackage1.editarexpAction">
+    <forward name="editarex" path="/editexp.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/cambiarexp" name="editexpActionForm" type="mypackage1.editexpAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/agregarexp" name="agregarexpActionForm" type="mypackage1.agregarexpAction">
+     <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+
     
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>

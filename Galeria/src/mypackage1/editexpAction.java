@@ -15,7 +15,8 @@ import java.sql.SQLException;
 import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
-public class expoAction extends Action 
+
+public class editexpAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -26,23 +27,25 @@ public class expoAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-      expoActionForm cod = (expoActionForm) form;
-      String codigo = cod.getId();
-     System.out.println("editame"+codigo);
 
-     Connection cn = null;
+      editexpActionForm cc = (editexpActionForm) form;
+      String tit = cc.getTitulo();
+      String id = cc.getId();
+      String descr = cc.getDescr();
+      String fecha_a = cc.getFecha_ini();
+      String fecha_b = cc.getFecha_fin();
+      
+    Connection cn = null;
     ConnectDB conn =new ConnectDB();
     ResultSet rsConsulta = null;
 
        try
        {
          cn = conn.conexion;
-         String cadena = "delete from jd_expobra where idexposicion ="+codigo+"";
+         String cadena = "update jd_exposicion SET titulo='"+tit+"', descripcion='"+descr+"', fec_ini=TO_DATE('"+fecha_a+"','DD/MM/YYYY'), fec_cie= TO_DATE('"+fecha_b+"','DD/MM/YYYY') WHERE idexposicion='"+id+"'";
          System.out.println(cadena);
          int a = conn.InsertaDatos(cadena);
-         String cadenab = "delete from jd_exposicion where idexposicion ="+codigo+"";
-         System.out.println(cadenab);
-         int b = conn.InsertaDatos(cadenab);
+          
          return mapping.findForward("bueno");
 	      }
 	
@@ -57,6 +60,5 @@ public class expoAction extends Action
     conn.closeConnection();	
 
   }
-      
   }
 }
