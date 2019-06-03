@@ -47,7 +47,7 @@ public class _editobras extends oracle.jsp.runtime.HttpJsp {
 
 
       out.write(__jsp_StaticText.text[0]);
-      /*@lineinfo:user-code*//*@lineinfo:13^1*/      out.print( new java.util.Date() );
+      /*@lineinfo:user-code*//*@lineinfo:18^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
       out.write(__jsp_StaticText.text[1]);
 
@@ -72,7 +72,7 @@ public class _editobras extends oracle.jsp.runtime.HttpJsp {
     static {
       try {
       text[0] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nEDITTTTTTTTTT</h2>\n<p>\n".toCharArray();
+      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>Editar Obras:</h2>\n<h3>Ingrese el Codigo Correspondiente</h3>\n  <html:form action=\"/editobras\">\n    <bean:message key=\"codi.promp\" />\n    <html:text property=\"codigo\" />\n    <html:submit value=\"Buscar\" />\n  </html:form>\n<p>\n".toCharArray();
       text[1] = 
       "</p>\n</body>\n</html>\n".toCharArray();
       }
