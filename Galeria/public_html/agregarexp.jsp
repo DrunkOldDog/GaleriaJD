@@ -24,7 +24,7 @@ Fecha Inicio  <html:text property="fecha_ini" styleClass="form-control" />
 <br>
 Fecha Fin <html:text property="fecha_fin" styleClass="form-control" />
 <br>
-Estado Activo <input type="radio" name="estado" value="1"> Estado Inactivo <input type="radio" name="estado" value="0"><br>
+Estado Activo <input type="radio" name="estado" value="1" checked> Estado Inactivo <input type="radio" name="estado" value="0"><br>
 <html:submit value="Agregar" styleClass="btn btn-success"  />
 </html:form>
 </body>

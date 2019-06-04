@@ -39,8 +39,9 @@ Exposiciones
   </table>
 </html:form>
 <br>
-<center><h5>
-Editar Exposicion: <a class="btn btn-primary" href="editarexp.jsp" role="button">Editar</a> Agregar Exposicion: <a class="btn btn-success" href="agregarexp.jsp" role="button">Agregar</a>
+<h5>
+<a class="btn btn-primary" href="editarexp.jsp" role="button">Editar</a>
+<a class="btn btn-success" href="agregarexp.jsp" role="button">Agregar</a>
 </h5>
 </body>
 </html>

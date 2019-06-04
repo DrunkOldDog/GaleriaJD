@@ -251,7 +251,7 @@ public class _expo extends com.orionserver.http.OrionHttpJspPage {
       text[13] = 
       "\r\n  </table>\r\n".getBytes("Cp1252");
       text[14] = 
-      "\r\n<br>\r\n<center><h5>\r\nEditar Exposicion: <a class=\"btn btn-primary\" href=\"editarexp.jsp\" role=\"button\">Editar</a> Agregar Exposicion: <a class=\"btn btn-success\" href=\"agregarexp.jsp\" role=\"button\">Agregar</a>\r\n</h5>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
+      "\r\n<br>\r\n<h5>\r\n<a class=\"btn btn-primary\" href=\"editarexp.jsp\" role=\"button\">Editar</a>\r\n<a class=\"btn btn-success\" href=\"agregarexp.jsp\" role=\"button\">Agregar</a>\r\n</h5>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);

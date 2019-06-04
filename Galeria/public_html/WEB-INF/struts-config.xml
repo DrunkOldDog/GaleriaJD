@@ -14,6 +14,10 @@
     <form-bean name="obrasActionForm" type="mypackage1.obrasActionForm"/>
     <form-bean name="addobraActionForm" type="mypackage1.addobraActionForm"/>
     <form-bean name="editobrasActionForm" type="mypackage1.editobrasActionForm"/>
+    <form-bean name="artistasActionForm" type="mypackage1.artistasActionForm"/>
+    <form-bean name="editarartActionForm" type="mypackage1.editarartActionForm"/>
+    <form-bean name="modiartActionForm" type="mypackage1.modiartActionForm"/>
+    <form-bean name="agregarartActionForm" type="mypackage1.agregarartActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
@@ -21,6 +25,7 @@
       <forward name="ventas" path="/ventas.jsp"/>
       <forward name="expos" path="/expo.jsp"/>
       <forward name="obras" path="/obras.jsp"/>
+      <forward name="artists" path="/artistas.jsp"/>
     </action>
     <action path="/login" type="mypackage1.loginAction" name="loginActionForm" scope="request">
     <forward name="ok" path="/inicio.jsp"/>
@@ -59,8 +64,20 @@
       <forward name="malo" path="/bad.jsp"/>
     </action>
     <action path="/editobras" name="editobrasActionForm" type="mypackage1.editobrasAction"/>
-
+    <action path="/art" name="artistasActionForm" type="mypackage1.artistasAction"/>
     
+    <action path="/buscarart" name="editarartActionForm" type="mypackage1.editarartAction">
+     <forward name="editarart" path="/modiart.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/cambiarart" name="modiartActionForm" type="mypackage1.modiartAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/agregarart" name="agregarartActionForm" type="mypackage1.agregarartAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>
 </struts-config>

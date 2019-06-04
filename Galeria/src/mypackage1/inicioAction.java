@@ -30,6 +30,66 @@ public class inicioAction extends Action
     inicioActionForm abm = (inicioActionForm) form;
     String boton = abm.getBoton();
 
+
+    if(boton.equals("Artistas"))
+    {
+
+      Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+    ResultSet rsConsulta2 = null;
+    try
+    {
+      cn = conn.conexion;
+      String cadena = "Select a.idartista,a.nombre,a.apellido,TO_CHAR(a.fec_nac,'DD/MM/YYYY') as fec_nac, b.nombre as ciudad from jd_artista a, jd_ciudad b where a.idciudad = b.idciudad order by 1";
+      rsConsulta = conn.getData(cadena);
+      ArrayList items = new ArrayList();
+      while (rsConsulta.next())
+      {
+        ClaseArt item = new ClaseArt();
+        item.setId(rsConsulta.getString("idartista"));
+        item.setNombre(rsConsulta.getString("NOMBRE")+" "+rsConsulta.getString("APELLIDO"));
+        item.setFecha_nac(rsConsulta.getString("fec_nac"));
+        item.setCiudad(rsConsulta.getString("ciudad"));
+        items.add(item);
+        System.out.println("Paso ..");
+    }
+    artistasActionForm f = new artistasActionForm ();	   
+    f.setTabla(items);
+    request.getSession().setAttribute("nn",f);
+    
+      String cadena2 = "select * from jd_ciudad order by 1";
+      rsConsulta2 = conn.getData(cadena2);
+      ArrayList items2 = new ArrayList();
+      while (rsConsulta2.next())
+      {
+        ClaseDep item2 = new ClaseDep();
+        item2.setCodigo(rsConsulta2.getString("idciudad"));
+        item2.setNomobr(rsConsulta2.getString("nombre"));
+        items2.add(item2);
+        System.out.println("Paso ..");
+    }  
+     request.getSession().setAttribute("ayuda",items2);
+
+    
+    return mapping.findForward("artists");
+	}
+	
+    catch(Exception e)
+    {
+      e.printStackTrace();
+      return (mapping.findForward("mal"));
+    }
+    finally
+    {
+      conn.closeConnection();	
+    }
+      
+      
+      
+    }
+
+
   if (boton.equals("Exposiciones"))
   {
     Connection cn = null;

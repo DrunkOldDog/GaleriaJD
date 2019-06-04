@@ -9,6 +9,13 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
+
 
 public class editobrasAction extends Action 
 {
@@ -44,7 +51,7 @@ public class editobrasAction extends Action
          request.getSession().setAttribute("oest",rsConsulta.getString("ESTILO"));
          request.getSession().setAttribute("otip",rsConsulta.getString("TIPO_OBRA"));
          request.getSession().setAttribute("osal",rsConsulta.getString("SALON"));
-         request.getSession().setAttribute("onom",rsConsulta.getString("NOMBRE")+" "rsConsulta.getString("APELLIDO"));
+         request.getSession().setAttribute("onom",rsConsulta.getString("NOMBRE")+" "+rsConsulta.getString("APELLIDO"));
          }
          return mapping.findForward("edit");
 	      }
