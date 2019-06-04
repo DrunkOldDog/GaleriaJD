@@ -47,12 +47,9 @@ public class _bad extends oracle.jsp.runtime.HttpJsp {
 
 
       out.write(__jsp_StaticText.text[0]);
-      /*@lineinfo:user-code*//*@lineinfo:12^8*/      out.print(session.getAttribute("error"));
+      /*@lineinfo:user-code*//*@lineinfo:17^24*/      out.print(session.getAttribute("error"));
       /*@lineinfo:generated-code*/
       out.write(__jsp_StaticText.text[1]);
-      /*@lineinfo:user-code*//*@lineinfo:16^1*/      out.print( new java.util.Date() );
-      /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[2]);
 
 
     }
@@ -71,15 +68,13 @@ public class _bad extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[3][];
+    private static final char text[][]=new char[2][];
     static {
       try {
       text[0] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nError\n</title>\n</head>\n<body>\n<center><h2>\nError! ".toCharArray();
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/estilo.css\">\n<script type=\"text/javascript\"  src=\"js/jquery-1.11.0.min.js\"></script>\n<script type=\"text/javascript\" src=\"js/jquery-ui.min.js\"></script> \n<script type=\"text/javascript\" src=\"js/animated_bg.js\"></script>\n<script type=\"text/javascript\" src=\"js/jquery-3.4.1.min.js\"></script>\t\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nError\n</title>\n</head>\n<body Class=\"animated_bg\">\n<center>\n<h1 class=\"ml2\">Error! ".toCharArray();
       text[1] = 
-      "\n</h2>\n<h3>Intentelo Mas Tarde..</h3></center>\n<p>\n".toCharArray();
-      text[2] = 
-      "</p>\n</body>\n</html>\n".toCharArray();
+      "</h1>\n<h1 class=\"ml2\">Intentelo Mas Tarde..</h1>\n</center>\n<p></p>\n<center><img src=\"img/homero.gif\"></center>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js\"></script>\n<script>\n// Wrap every letter in a span\n$('.ml2').each(function(){\n  $(this).html($(this).text().replace(/([^\\x00-\\x80]|\\w)/g, \"<span class='letter'>$&</span>\"));\n});\n\nanime.timeline({loop: true})\n  .add({\n    targets: '.ml2 .letter',\n    scale: [4,1],\n    opacity: [0,1],\n    translateZ: 0,\n    easing: \"easeOutExpo\",\n    duration: 950,\n    delay: function(el, i) {\n      return 70*i;\n    }\n  }).add({\n    targets: '.ml2',\n    opacity: 0,\n    duration: 1000,\n    easing: \"easeOutExpo\",\n    delay: 1000\n  });\n</script>\n<script>\n\tjQuery(document).ready(function(){\n\n\t\t$('.animated_bg2').animatedBG({\n\t\t\tcolorSet: ['#abebfe', '#aad667', '#57e6ee', '#ff7ebb'],\n\t\t\tspeed: 2000\n\t\t});\n\n\t\t$('.animated_bg3').animatedBG({\n\t\t\tcolorSet: ['#71a98b', '#b15c8e', '#dc6b68', '#6c5a94', '#b14c4e', '#736357'],\n\t\t\tspeed: 6000\n\t\t});\n\n\t});\n</script>\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {
         System.err.println(th);

@@ -229,6 +229,9 @@
       <Item class="oracle.ide.model.DeployableTextNode">
          <URL path="public_html/js/altasArt.js"/>
       </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/badd.js"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>
