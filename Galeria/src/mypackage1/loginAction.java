@@ -44,14 +44,17 @@ public class loginAction extends Action
 
     try
     {
-    String cadena="select * from jd_empleado where username='"+nom+"'and idempleado="+cod+"";
+    String cadena="select idempleado,nombre,apellido,TO_CHAR(FEC_INGRESO,'DD/MM/YYYY') as FEC_INGRESO,username from jd_empleado where username='"+nom+"'and idempleado="+cod+"";
     System.out.println(cadena);
     rsConsulta = conn.getData(cadena);
     if (rsConsulta.next()){
        request.getSession().setAttribute("fn",rsConsulta.getString("NOMBRE"));
        request.getSession().setAttribute("ln",rsConsulta.getString("APELLIDO"));
+       request.getSession().setAttribute("fi",rsConsulta.getString("FEC_INGRESO"));
+       request.getSession().setAttribute("un",rsConsulta.getString("USERNAME"));
        return mapping.findForward("ok");
     }else{
+       request.getSession().setAttribute("error","El Username o el Password son Incorrectos");
        return mapping.findForward("nook");
     }
 	}

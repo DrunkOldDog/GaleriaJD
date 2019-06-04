@@ -84,11 +84,11 @@ public class inicioAction extends Action
     {
       conn.closeConnection();	
     }
-      
-      
-      
     }
 
+    if (boton.equals("Empleados")) {
+        return mapping.findForward("empleados");
+    }
 
   if (boton.equals("Exposiciones"))
   {

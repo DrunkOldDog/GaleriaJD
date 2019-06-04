@@ -204,6 +204,22 @@
          <URL path="public_html/bad.jsp"/>
          <encoding>windows-1252</encoding>
       </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/altasObra.js"/>
+      </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/valida.js"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JspSourceNode">
+         <URL path="public_html/empleado.jsp"/>
+         <encoding>windows-1252</encoding>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/empleadoActionForm.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/empleadoAction.java"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>

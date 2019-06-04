@@ -20,6 +20,7 @@
     <form-bean name="agregarartActionForm" type="mypackage1.agregarartActionForm"/>
     <form-bean name="modiobrasActionForm" type="mypackage1.modiobrasActionForm"/>
     <form-bean name="expasActionForm" type="mypackage1.expasActionForm"/>
+    <form-bean name="empleadoActionForm" type="mypackage1.empleadoActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
@@ -29,6 +30,7 @@
       <forward name="obras" path="/obras.jsp"/>
       <forward name="pasadas" path="/expas.jsp"/>
       <forward name="artists" path="/artistas.jsp"/>
+      <forward name="empleados" path="/empleado.jsp"/>
     </action>
     <action path="/login" type="mypackage1.loginAction" name="loginActionForm" scope="request">
     <forward name="ok" path="/inicio.jsp"/>
@@ -86,6 +88,10 @@
     </action>
     <action path="/editar" name="modiobrasActionForm" type="mypackage1.modiobrasAction">
       <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/editemp" name="empleadoActionForm" type="mypackage1.empleadoAction">
+      <forward name="bueno" path="/login.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
   </action-mappings>

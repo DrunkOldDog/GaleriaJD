@@ -6,6 +6,8 @@
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="css/estilo.css">
+<script type="text/javascript" language="JavaScript" src="js/sort.js"></script>	
+<script type="text/javascript" language="JavaScript" src="js/valida.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Hello World
@@ -19,7 +21,7 @@ Formulario de Compra
    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
    Calendar cal = Calendar.getInstance();           
 %>
-<html:form action="/compras">
+<html:form action="/compras" onsubmit="return fParams( )">
 <h4>Datos Cliente</h4>
 <label><bean:message key="nombre.promp" /></label>
 <html:text styleClass="form-control" property="nombre" />

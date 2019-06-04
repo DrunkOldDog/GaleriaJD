@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _inicio extends oracle.jsp.runtime.HttpJsp {
+public class _inicio extends com.orionserver.http.OrionHttpJspPage {
 
   public final String _globalsClassName = null;
 
@@ -30,30 +30,26 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
-    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
-      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
-      JspFactory.getDefaultFactory().releasePageContext(pageContext);
-      return;
-}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _inicio page = this;
     ServletConfig config = pageContext.getServletConfig();
 
+    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      out.write(__jsp_StaticText.text[0]);
-      out.write(__jsp_StaticText.text[1]);
+      __ojsp_s_out.write(__jsp_StaticText.text[0]);
+      __ojsp_s_out.write(__jsp_StaticText.text[1]);
       /*@lineinfo:user-code*//*@lineinfo:13^12*/      out.print(session.getAttribute("fn"));
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[2]);
+      __ojsp_s_out.write(__jsp_StaticText.text[2]);
       /*@lineinfo:user-code*//*@lineinfo:13^49*/      out.print(session.getAttribute("ln"));
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[3]);
+      __ojsp_s_out.write(__jsp_StaticText.text[3]);
       /*@lineinfo:translated-code*//*@lineinfo:15^1*/      {
         org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
         __jsp_taghandler_1.setParent(null);
@@ -63,7 +59,7 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
         {
           do {
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[4]);
+            __ojsp_s_out.write(__jsp_StaticText.text[4]);
             /*@lineinfo:translated-code*//*@lineinfo:16^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_2=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
@@ -74,16 +70,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_2,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_2.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_2.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[5]);
+            __ojsp_s_out.write(__jsp_StaticText.text[5]);
             /*@lineinfo:translated-code*//*@lineinfo:17^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_3=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
@@ -94,16 +92,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_3,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[6]);
+            __ojsp_s_out.write(__jsp_StaticText.text[6]);
             /*@lineinfo:translated-code*//*@lineinfo:18^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_4=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
@@ -114,16 +114,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_4,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_4.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_4.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[7]);
+            __ojsp_s_out.write(__jsp_StaticText.text[7]);
             /*@lineinfo:translated-code*//*@lineinfo:19^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_5=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
@@ -134,16 +136,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_5,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_5.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_5.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[8]);
+            __ojsp_s_out.write(__jsp_StaticText.text[8]);
             /*@lineinfo:translated-code*//*@lineinfo:20^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_6=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
@@ -154,16 +158,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_6,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_6.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_6.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[9]);
+            __ojsp_s_out.write(__jsp_StaticText.text[9]);
             /*@lineinfo:translated-code*//*@lineinfo:21^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_7=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
@@ -174,16 +180,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_7,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[10]);
+            __ojsp_s_out.write(__jsp_StaticText.text[10]);
             /*@lineinfo:translated-code*//*@lineinfo:22^3*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_8=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property styleClass value");
               __jsp_taghandler_8.setParent(__jsp_taghandler_1);
@@ -194,16 +202,18 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_8,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_8.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_8.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[11]);
+            __ojsp_s_out.write(__jsp_StaticText.text[11]);
           /*@lineinfo:translated-code*//*@lineinfo:22^95*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
@@ -211,10 +221,10 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[12]);
+      __ojsp_s_out.write(__jsp_StaticText.text[12]);
       /*@lineinfo:user-code*//*@lineinfo:26^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[13]);
+      __ojsp_s_out.write(__jsp_StaticText.text[13]);
 
 
     }
@@ -233,37 +243,37 @@ public class _inicio extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[14][];
+    private static final byte text[][]=new byte[14][];
     static {
       try {
       text[0] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[1] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nBienvenido ".toCharArray();
+      "\r\n<html>\r\n<head>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nHello World\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nBienvenido ".getBytes("Cp1252");
       text[2] = 
-      "&nbsp;".toCharArray();
+      "&nbsp;".getBytes("Cp1252");
       text[3] = 
-      "\n</h2>\n".toCharArray();
+      "\r\n</h2>\r\n".getBytes("Cp1252");
       text[4] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[5] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[6] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[7] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[8] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[9] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[10] = 
-      "\n  ".toCharArray();
+      "\r\n  ".getBytes("Cp1252");
       text[11] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[12] = 
-      "\n\n<p>\n".toCharArray();
+      "\r\n\r\n<p>\r\n".getBytes("Cp1252");
       text[13] = 
-      "</p>\n</body>\n</html>\n".toCharArray();
+      "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);
