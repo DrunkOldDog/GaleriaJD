@@ -29,6 +29,8 @@ public class obrasAction extends Action
   {
     obrasActionForm abm = (obrasActionForm) form;
     String boton = abm.getBoton();
+    String aidi = abm.getApecli();
+    
     if (boton.equals("Add")) {
       Connection cn = null;
       ConnectDB conn =new ConnectDB();
@@ -113,8 +115,43 @@ public class obrasAction extends Action
       {
         conn.closeConnection();	
       }
-  }else{
+  }else if(boton.equals("Editar")){
       return mapping.findForward("editobras");
+  }else{
+    System.out.println(boton);
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+
+       try
+       {
+         cn = conn.conexion;
+         String cadena = "delete from jd_expobra where idobra ="+boton+"";
+         System.out.println(cadena);
+         int a = conn.InsertaDatos(cadena);
+         String cadenab = "delete from jd_artobra where idobra ="+boton+"";
+         System.out.println(cadenab);
+         int b = conn.InsertaDatos(cadenab);
+         String cadenac = "delete from jd_compra where idobra ="+boton+"";
+         System.out.println(cadenac);
+         int c = conn.InsertaDatos(cadenac);
+         String cadenad = "delete from jd_obra where idobra ="+boton+"";
+         System.out.println(cadenad);
+         int d = conn.InsertaDatos(cadenad);
+         return mapping.findForward("bueno");
+	      }
+	
+        catch(Exception e)
+       {
+          e.printStackTrace();
+          return (mapping.findForward("malo"));
+       }
+       
+    finally
+    {
+    conn.closeConnection();	
+
+  }
   }
   }
 }

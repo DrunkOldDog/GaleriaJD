@@ -57,6 +57,7 @@
     <action path="/obras" name="obrasActionForm" type="mypackage1.obrasAction">
       <forward name="addobras" path="/addobra.jsp"/>
       <forward name="editobras" path="/editobras.jsp"/>
+      <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
     <action path="/addobra" name="addobraActionForm" type="mypackage1.addobraAction">

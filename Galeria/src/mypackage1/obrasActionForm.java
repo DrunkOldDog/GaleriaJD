@@ -10,6 +10,7 @@ public class obrasActionForm extends ActionForm
 {
   ArrayList tabla;
   String boton;
+  String apecli;
 
   /**
    * Reset all properties to their default values.
@@ -50,5 +51,15 @@ public class obrasActionForm extends ActionForm
   public void setBoton(String newBoton)
   {
     boton = newBoton;
+  }
+
+  public String getApecli()
+  {
+    return apecli;
+  }
+
+  public void setApecli(String newApecli)
+  {
+    apecli = newApecli;
   }
 }

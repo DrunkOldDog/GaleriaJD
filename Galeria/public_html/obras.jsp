@@ -5,6 +5,7 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Hello World
@@ -26,6 +27,7 @@ Hello World
       <th scope="col">Salon</th>
       <th scope="col">Artista</th>
       <th scope="col">Propietario Actual</th>
+      <th scope="col">Eliminar ID</th>
     </tr>
   </thead>
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
@@ -40,11 +42,11 @@ Hello World
               <td><bean:write name="tabla" property="nomemp" /></td>
               <td><bean:write name="tabla" property="nomcli" /></td>
               <td><bean:write name="tabla" property="idcompra"/></td>
+              <td><html:submit property="boton" styleClass="btn btn-danger">
+              <bean:write name="tabla" property="apecli" /></html:submit></td>
             </tr>
   </logic:iterate>
   </table>
-</html:form>
-<html:form action="/obras">
   <html:submit styleClass="btn btn-primary" property="boton" value="Add" />
   <html:submit styleClass="btn btn-primary" property="boton" value="Editar" />
 </html:form>
