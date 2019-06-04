@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _expas extends oracle.jsp.runtime.HttpJsp {
+public class _expas extends com.orionserver.http.OrionHttpJspPage {
 
   public final String _globalsClassName = null;
 
@@ -30,26 +30,22 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
-    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
-      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
-      JspFactory.getDefaultFactory().releasePageContext(pageContext);
-      return;
-}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _expas page = this;
     ServletConfig config = pageContext.getServletConfig();
 
+    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      out.write(__jsp_StaticText.text[0]);
-      out.write(__jsp_StaticText.text[1]);
-      out.write(__jsp_StaticText.text[2]);
-      /*@lineinfo:translated-code*//*@lineinfo:31^3*/      {
+      __ojsp_s_out.write(__jsp_StaticText.text[0]);
+      __ojsp_s_out.write(__jsp_StaticText.text[1]);
+      __ojsp_s_out.write(__jsp_StaticText.text[2]);
+      /*@lineinfo:translated-code*//*@lineinfo:47^3*/      {
         org.apache.struts.taglib.logic.IterateTag __jsp_taghandler_1=(org.apache.struts.taglib.logic.IterateTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.logic.IterateTag.class,"org.apache.struts.taglib.logic.IterateTag id indexId name property");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setId("tabla");
@@ -62,12 +58,13 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
         if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
         {
           out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_1,__jsp_tag_starteval,out);
+          __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
           do {
             tabla = (java.lang.Object) pageContext.findAttribute("tabla");
             index = (java.lang.Integer) pageContext.findAttribute("index");
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[3]);
-            /*@lineinfo:translated-code*//*@lineinfo:33^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[3]);
+            /*@lineinfo:translated-code*//*@lineinfo:49^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_2=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setName("tabla");
@@ -83,8 +80,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[4]);
-            /*@lineinfo:translated-code*//*@lineinfo:34^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[4]);
+            /*@lineinfo:translated-code*//*@lineinfo:50^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_3=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setName("tabla");
@@ -100,8 +97,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[5]);
-            /*@lineinfo:translated-code*//*@lineinfo:35^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[5]);
+            /*@lineinfo:translated-code*//*@lineinfo:51^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_4=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setName("tabla");
@@ -117,8 +114,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[6]);
-            /*@lineinfo:translated-code*//*@lineinfo:36^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[6]);
+            /*@lineinfo:translated-code*//*@lineinfo:52^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_5=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setName("tabla");
@@ -134,8 +131,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[7]);
-            /*@lineinfo:translated-code*//*@lineinfo:37^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[7]);
+            /*@lineinfo:translated-code*//*@lineinfo:53^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_6=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setName("tabla");
@@ -151,8 +148,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[8]);
-            /*@lineinfo:translated-code*//*@lineinfo:38^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[8]);
+            /*@lineinfo:translated-code*//*@lineinfo:54^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_7=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setName("tabla");
@@ -168,8 +165,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[9]);
-            /*@lineinfo:translated-code*//*@lineinfo:39^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[9]);
+            /*@lineinfo:translated-code*//*@lineinfo:55^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_8=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_8.setParent(__jsp_taghandler_1);
               __jsp_taghandler_8.setName("tabla");
@@ -185,8 +182,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[10]);
-            /*@lineinfo:translated-code*//*@lineinfo:40^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[10]);
+            /*@lineinfo:translated-code*//*@lineinfo:56^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_9=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_9.setParent(__jsp_taghandler_1);
               __jsp_taghandler_9.setName("tabla");
@@ -202,8 +199,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_9);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[11]);
-            /*@lineinfo:translated-code*//*@lineinfo:41^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[11]);
+            /*@lineinfo:translated-code*//*@lineinfo:57^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_10=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_10.setParent(__jsp_taghandler_1);
               __jsp_taghandler_10.setName("tabla");
@@ -219,8 +216,8 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_10);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[12]);
-            /*@lineinfo:translated-code*//*@lineinfo:42^19*/            {
+            __ojsp_s_out.write(__jsp_StaticText.text[12]);
+            /*@lineinfo:translated-code*//*@lineinfo:58^19*/            {
               org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_11=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
               __jsp_taghandler_11.setParent(__jsp_taghandler_1);
               __jsp_taghandler_11.setName("tabla");
@@ -236,19 +233,20 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_11);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[13]);
-          /*@lineinfo:translated-code*//*@lineinfo:42^65*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            __ojsp_s_out.write(__jsp_StaticText.text[13]);
+          /*@lineinfo:translated-code*//*@lineinfo:58^65*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
           out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+          __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[14]);
-      /*@lineinfo:user-code*//*@lineinfo:48^1*/      out.print( new java.util.Date() );
+      __ojsp_s_out.write(__jsp_StaticText.text[14]);
+      /*@lineinfo:user-code*//*@lineinfo:65^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[15]);
+      __ojsp_s_out.write(__jsp_StaticText.text[15]);
 
 
     }
@@ -267,41 +265,41 @@ public class _expas extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[16][];
+    private static final byte text[][]=new byte[16][];
     static {
       try {
       text[0] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[1] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[2] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nExposiciones Pasadas:\n</h2>\n<table class=\"table table-striped\">\n<thead>\n    <tr>\n      <th scope=\"col\">Exposicion</th>\n      <th scope=\"col\">Fecha de Cierre</th>\n      <th scope=\"col\">Obra</th>\n      <th scope=\"col\">Descripcion</th>\n      <th scope=\"col\">Precio</th>\n      <th scope=\"col\">Estilo</th>\n      <th scope=\"col\">Tipo de Obra</th>\n      <th scope=\"col\">Salon</th>\n      <th scope=\"col\">Artista</th>\n      <th scope=\"col\">Propietario Actual</th>\n    </tr>\n  </thead>\n  ".toCharArray();
+      "\r\n<html>\r\n<head>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<script type=\"text/javascript\" src=\"js/jquery-3.4.1.min.js\"></script>\t\r\n<script>\r\n$(document).ready(function(){\r\n  $(\"#myInput\").on(\"keyup\", function() {\r\n    var value = $(this).val().toLowerCase();\r\n    $(\"#myTable tr\").filter(function() {\r\n      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)\r\n    });\r\n  });\r\n});\r\n</script>\r\n<title>\r\nHello World\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nExposiciones Pasadas:\r\n</h2>\r\n  <h4>Filtre los Resultados Aqui!</h4>\r\n  <input id=\"myInput\" type=\"text\" class=\"form-control\" placeholder=\"Busque..\">\r\n<table class=\"table table-striped\">\r\n<thead>\r\n    <tr>\r\n      <th scope=\"col\">Exposicion</th>\r\n      <th scope=\"col\">Fecha de Cierre</th>\r\n      <th scope=\"col\">Obra</th>\r\n      <th scope=\"col\">Descripcion</th>\r\n      <th scope=\"col\">Precio</th>\r\n      <th scope=\"col\">Estilo</th>\r\n      <th scope=\"col\">Tipo de Obra</th>\r\n      <th scope=\"col\">Salon</th>\r\n      <th scope=\"col\">Artista</th>\r\n      <th scope=\"col\">Propietario Actual</th>\r\n    </tr>\r\n  </thead>\r\n\r\n    <tbody id=\"myTable\">\r\n\r\n  ".getBytes("Cp1252");
       text[3] = 
-      "\n            <tr>\n              <td>".toCharArray();
+      "\r\n            <tr>\r\n              <td>".getBytes("Cp1252");
       text[4] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[5] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[6] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[7] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[8] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[9] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[10] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[11] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[12] = 
-      "</td>\n              <td>".toCharArray();
+      "</td>\r\n              <td>".getBytes("Cp1252");
       text[13] = 
-      "</td>\n            </tr>\n  ".toCharArray();
+      "</td>\r\n            </tr>\r\n  ".getBytes("Cp1252");
       text[14] = 
-      "\n  </table>\n\n<p>\n".toCharArray();
+      "\r\n  </tbody>\r\n  </table>\r\n\r\n<p>\r\n".getBytes("Cp1252");
       text[15] = 
-      "</p>\n</body>\n</html>\n".toCharArray();
+      "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);

@@ -5,6 +5,17 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Artistas
@@ -15,7 +26,8 @@ Artistas
 Artistas: <a class="btn btn-primary" href="editarart.jsp" role="button">Editar</a>
 <a class="btn btn-success" href="agregarart.jsp" role="button">Agregar</a>
 </h2>
-
+<h4>Filtre los Resultados Aqui!</h4>
+<input id="myInput" type="text" class="form-control" placeholder="Busque..">
 <html:form action="/art">
 <table class="table table-striped">
 <thead>
@@ -26,6 +38,7 @@ Artistas: <a class="btn btn-primary" href="editarart.jsp" role="button">Editar</
        <th scope="col">ID (Click para eliminar)</th>
     </tr>
   </thead>
+  <tbody id="myTable">
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
             <tr>
               <td><bean:write name="tabla" property="nombre"/></td>
@@ -36,6 +49,7 @@ Artistas: <a class="btn btn-primary" href="editarart.jsp" role="button">Editar</
               </html:submit></td>
             </tr>
   </logic:iterate>
+  </tbody>
   </table>
 </html:form>
 <br>

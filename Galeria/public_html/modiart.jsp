@@ -3,6 +3,8 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" language="JavaScript" src="js/altasArt.js"></script>	
+<script type="text/javascript" language="JavaScript" src="js/valida.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Artista
@@ -21,7 +23,7 @@ Artista
 Editar Artista
 </h2>
 
-<html:form action="/cambiarart">
+<html:form action="/cambiarart" onsubmit="return fParams( )">
 
 <br>
 ID Artista  <html:text styleClass="form-control" property="id" value="<%=id%>" readonly="TRUE" />

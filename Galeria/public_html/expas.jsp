@@ -5,6 +5,17 @@
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 <title>
 Hello World
 </title>
@@ -13,6 +24,8 @@ Hello World
 <h2>
 Exposiciones Pasadas:
 </h2>
+  <h4>Filtre los Resultados Aqui!</h4>
+  <input id="myInput" type="text" class="form-control" placeholder="Busque..">
 <table class="table table-striped">
 <thead>
     <tr>
@@ -28,6 +41,9 @@ Exposiciones Pasadas:
       <th scope="col">Propietario Actual</th>
     </tr>
   </thead>
+
+    <tbody id="myTable">
+
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
             <tr>
               <td><bean:write name="tabla" property="fecha" /></td>
@@ -42,6 +58,7 @@ Exposiciones Pasadas:
               <td><bean:write name="tabla" property="idcompra"/></td>
             </tr>
   </logic:iterate>
+  </tbody>
   </table>
 
 <p>

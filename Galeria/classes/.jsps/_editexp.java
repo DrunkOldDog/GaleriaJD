@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _editexp extends com.orionserver.http.OrionHttpJspPage {
+public class _editexp extends oracle.jsp.runtime.HttpJsp {
 
   public final String _globalsClassName = null;
 
@@ -30,21 +30,25 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
+    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
+      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
+      JspFactory.getDefaultFactory().releasePageContext(pageContext);
+      return;
+}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _editexp page = this;
     ServletConfig config = pageContext.getServletConfig();
 
-    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      __ojsp_s_out.write(__jsp_StaticText.text[0]);
-      __ojsp_s_out.write(__jsp_StaticText.text[1]);
-      /*@lineinfo:user-code*//*@lineinfo:10^1*/      
+      out.write(__jsp_StaticText.text[0]);
+      out.write(__jsp_StaticText.text[1]);
+      /*@lineinfo:user-code*//*@lineinfo:12^1*/      
         String id =session.getAttribute("codigo").toString();
         String tit =session.getAttribute("nombre").toString();
         String desc =session.getAttribute("descr").toString();
@@ -52,18 +56,19 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
         String fecha_b =session.getAttribute("fecha_fin").toString();
       
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[2]);
-      /*@lineinfo:translated-code*//*@lineinfo:23^1*/      {
-        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
+      out.write(__jsp_StaticText.text[2]);
+      /*@lineinfo:translated-code*//*@lineinfo:25^1*/      {
+        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action onsubmit");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setAction("/cambiarexp");
+        __jsp_taghandler_1.setOnsubmit("return fParams( )");
         __jsp_tag_starteval=__jsp_taghandler_1.doStartTag();
         if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
         {
           do {
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[3]);
-            /*@lineinfo:translated-code*//*@lineinfo:26^16*/            {
+            out.write(__jsp_StaticText.text[3]);
+            /*@lineinfo:translated-code*//*@lineinfo:28^16*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_2=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property readonly styleClass value");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setProperty("id");
@@ -74,19 +79,17 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_2,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_2.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_2.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[4]);
-            /*@lineinfo:translated-code*//*@lineinfo:28^9*/            {
+            out.write(__jsp_StaticText.text[4]);
+            /*@lineinfo:translated-code*//*@lineinfo:30^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_3=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass value");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setProperty("titulo");
@@ -96,19 +99,17 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_3,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[5]);
-            /*@lineinfo:translated-code*//*@lineinfo:30^14*/            {
+            out.write(__jsp_StaticText.text[5]);
+            /*@lineinfo:translated-code*//*@lineinfo:32^14*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_4=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass value");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setProperty("descr");
@@ -118,19 +119,17 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_4,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_4.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_4.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[6]);
-            /*@lineinfo:translated-code*//*@lineinfo:32^15*/            {
+            out.write(__jsp_StaticText.text[6]);
+            /*@lineinfo:translated-code*//*@lineinfo:34^15*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_5=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass value");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setProperty("fecha_ini");
@@ -140,19 +139,17 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_5,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_5.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_5.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[7]);
-            /*@lineinfo:translated-code*//*@lineinfo:34^11*/            {
+            out.write(__jsp_StaticText.text[7]);
+            /*@lineinfo:translated-code*//*@lineinfo:36^11*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_6=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass value");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setProperty("fecha_fin");
@@ -162,19 +159,17 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_6,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_6.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_6.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[8]);
-            /*@lineinfo:translated-code*//*@lineinfo:36^1*/            {
+            out.write(__jsp_StaticText.text[8]);
+            /*@lineinfo:translated-code*//*@lineinfo:38^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_7=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag styleClass value");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setStyleClass("btn btn-success");
@@ -183,26 +178,24 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_7,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[9]);
-          /*@lineinfo:translated-code*//*@lineinfo:36^62*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            out.write(__jsp_StaticText.text[9]);
+          /*@lineinfo:translated-code*//*@lineinfo:38^62*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[10]);
+      out.write(__jsp_StaticText.text[10]);
 
 
     }
@@ -221,31 +214,31 @@ public class _editexp extends com.orionserver.http.OrionHttpJspPage {
 
   }
   private static class __jsp_StaticText {
-    private static final byte text[][]=new byte[11][];
+    private static final char text[][]=new char[11][];
     static {
       try {
       text[0] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[1] = 
-      "\r\n<html>\r\n<head>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nExposicion\r\n</title>\r\n".getBytes("Cp1252");
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/altasExpo.js\"></script>\t\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/valida.js\"></script>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nExposicion\n</title>\n".toCharArray();
       text[2] = 
-      "\r\n</head>\r\n<body>\r\n<h2>\r\nEditar Exposicion \r\n</h2>\r\n\r\n".getBytes("Cp1252");
+      "\n</head>\n<body>\n<h2>\nEditar Exposicion \n</h2>\n\n".toCharArray();
       text[3] = 
-      "\r\n\r\n<br>\r\nID Exposicion  ".getBytes("Cp1252");
+      "\n\n<br>\nID Exposicion  ".toCharArray();
       text[4] = 
-      "\r\n<br>\r\nTitulo  ".getBytes("Cp1252");
+      "\n<br>\nTitulo  ".toCharArray();
       text[5] = 
-      "\r\n<br>\r\nDescripcion  ".getBytes("Cp1252");
+      "\n<br>\nDescripcion  ".toCharArray();
       text[6] = 
-      "\r\n<br>\r\nFecha Inicio  ".getBytes("Cp1252");
+      "\n<br>\nFecha Inicio  ".toCharArray();
       text[7] = 
-      "\r\n<br>\r\nFecha Fin ".getBytes("Cp1252");
+      "\n<br>\nFecha Fin ".toCharArray();
       text[8] = 
-      "\r\n<br>\r\n".getBytes("Cp1252");
+      "\n<br>\n".toCharArray();
       text[9] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[10] = 
-      "\r\n\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
+      "\n\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {
         System.err.println(th);
