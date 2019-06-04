@@ -6106,3 +6106,14 @@ javax.servlet.jsp.JspException: Cannot retrieve definition for form bean null
 04-06-19 07:01 PM WorkspaceJD-Galeria-webapp: 9.0.3.0.0 Started
 04-06-19 07:02 PM WorkspaceJD-Galeria-webapp: 9.0.3.0.0 Stopped
 04-06-19 07:02 PM Started
+04-06-19 07:02 PM WorkspaceJD-Galeria-webapp: JDevOJSP: init
+04-06-19 07:02 PM WorkspaceJD-Galeria-webapp: action: init
+04-06-19 07:02 PM WorkspaceJD-Galeria-webapp: 9.0.3.0.0 Started
+04-06-19 07:22 PM Started
+04-06-19 07:22 PM WorkspaceJD-Galeria-webapp: JDevOJSP: init
+04-06-19 07:22 PM WorkspaceJD-Galeria-webapp: action: init
+04-06-19 07:22 PM WorkspaceJD-Galeria-webapp: 9.0.3.0.0 Started
+04-06-19 07:31 PM Started
+04-06-19 07:31 PM WorkspaceJD-Galeria-webapp: JDevOJSP: init
+04-06-19 07:31 PM WorkspaceJD-Galeria-webapp: action: init
+04-06-19 07:31 PM WorkspaceJD-Galeria-webapp: 9.0.3.0.0 Started

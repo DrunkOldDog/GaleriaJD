@@ -220,6 +220,9 @@
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage1/empleadoAction.java"/>
       </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/jslogin.js"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>
