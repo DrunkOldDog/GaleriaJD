@@ -48,17 +48,18 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
 
       out.write(__jsp_StaticText.text[0]);
       out.write(__jsp_StaticText.text[1]);
-      /*@lineinfo:translated-code*//*@lineinfo:15^1*/      {
-        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
+      /*@lineinfo:translated-code*//*@lineinfo:17^1*/      {
+        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action onsubmit");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setAction("/agregarexp");
+        __jsp_taghandler_1.setOnsubmit("return fParams( )");
         __jsp_tag_starteval=__jsp_taghandler_1.doStartTag();
         if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
         {
           do {
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[2]);
-            /*@lineinfo:translated-code*//*@lineinfo:17^16*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:19^16*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_2=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property readonly styleClass");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setProperty("id");
@@ -78,7 +79,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[3]);
-            /*@lineinfo:translated-code*//*@lineinfo:19^9*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:21^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_3=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setProperty("titulo");
@@ -97,7 +98,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[4]);
-            /*@lineinfo:translated-code*//*@lineinfo:21^14*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:23^14*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_4=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setProperty("descr");
@@ -116,7 +117,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[5]);
-            /*@lineinfo:translated-code*//*@lineinfo:23^15*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:25^15*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_5=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setProperty("fecha_ini");
@@ -135,7 +136,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[6]);
-            /*@lineinfo:translated-code*//*@lineinfo:25^11*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:27^11*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_6=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setProperty("fecha_fin");
@@ -154,7 +155,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[7]);
-            /*@lineinfo:translated-code*//*@lineinfo:28^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:30^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_7=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag styleClass value");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setStyleClass("btn btn-success");
@@ -173,7 +174,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[8]);
-          /*@lineinfo:translated-code*//*@lineinfo:28^62*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+          /*@lineinfo:translated-code*//*@lineinfo:30^62*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
@@ -205,7 +206,7 @@ public class _agregarexp extends oracle.jsp.runtime.HttpJsp {
       text[0] = 
       "\n".toCharArray();
       text[1] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nExposicion\n</title>\n</head>\n<body>\n<h2>\nAgregar Exposicion \n</h2>\n".toCharArray();
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/altasExpo.js\"></script>\t\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/valida.js\"></script>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nExposicion\n</title>\n</head>\n<body>\n<h2>\nAgregar Exposicion \n</h2>\n".toCharArray();
       text[2] = 
       "\n<br>\nID Exposicion  ".toCharArray();
       text[3] = 

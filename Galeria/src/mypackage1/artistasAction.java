@@ -9,6 +9,12 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class artistasAction extends Action 
 {
@@ -21,6 +27,34 @@ public class artistasAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-    return mapping.findForward("success");
+    artistasActionForm cc = (artistasActionForm) form;
+    String aidi = cc.getId();
+
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+       try
+       {
+         cn = conn.conexion;
+         String cadena = "delete from jd_artobra where idartista ="+aidi;
+         System.out.println(cadena);
+         int a = conn.InsertaDatos(cadena);
+         String cadenab = "delete from jd_artista where idartista ="+aidi;
+         System.out.println(cadenab);
+         int b = conn.InsertaDatos(cadenab);
+         return mapping.findForward("bueno");
+	      }
+	
+        catch(Exception e)
+       {
+          e.printStackTrace();
+          return (mapping.findForward("malo"));
+       }
+       
+    finally
+    {
+    conn.closeConnection();	
+
+  }
   }
 }

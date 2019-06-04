@@ -72,7 +72,10 @@
           <forward name="editar" path="/modiobras.jsp"/>
           <forward name="malo" path="/bad.jsp"/>
     </action>
-    <action path="/art" name="artistasActionForm" type="mypackage1.artistasAction"/>
+    <action path="/art" name="artistasActionForm" type="mypackage1.artistasAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
     
     <action path="/buscarart" name="editarartActionForm" type="mypackage1.editarartAction">
      <forward name="editarart" path="/modiart.jsp"/>

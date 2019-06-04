@@ -47,8 +47,10 @@ public class editarexpAction extends Action
         request.getSession().setAttribute("fecha_fin",rsConsulta.getString("fec_cie"));
         return mapping.findForward("editarex");
       }
-      else
+      else{
+       request.getSession().setAttribute("error","La Exposicion con el ID: "+cod+" no se encuentra disponible actualmente");
        return mapping.findForward("malo");
+      }
     }
     catch(Exception e)
     {

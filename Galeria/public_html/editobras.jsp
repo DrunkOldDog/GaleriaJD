@@ -3,6 +3,7 @@
 <%@ page contentType="text/html;charset=windows-1252"%>
 <html>
 <head>
+<script type="text/javascript" language="JavaScript" src="js/valida.js"></script>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
@@ -14,7 +15,7 @@ Hello World
 <h3>Ingrese el Codigo Correspondiente</h3>
   <html:form action="/editobras">
     <bean:message key="codi.promp" />
-    <html:text property="codigo" />
+    <html:text property="codigo" onkeypress="EvaluateText('%d', this)" />
     <html:submit value="Buscar" />
   </html:form>
 <p>

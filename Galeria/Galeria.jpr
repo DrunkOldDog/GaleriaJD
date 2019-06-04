@@ -223,6 +223,12 @@
       <Item class="oracle.ide.model.DeployableTextNode">
          <URL path="public_html/js/jslogin.js"/>
       </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/altasExpo.js"/>
+      </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/js/altasArt.js"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>

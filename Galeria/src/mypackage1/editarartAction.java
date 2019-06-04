@@ -50,8 +50,10 @@ public class editarartAction extends Action
         request.getSession().setAttribute("idcity",rsConsulta.getString("idciudad"));
         return mapping.findForward("editarart");
       }
-      else
+      else{
+       request.getSession().setAttribute("error","El artista con el ID: "+cod+" no se encuentra disponible");
        return mapping.findForward("malo");
+      }
     }
     catch(Exception e)
     {

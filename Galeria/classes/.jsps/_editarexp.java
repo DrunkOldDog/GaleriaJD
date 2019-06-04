@@ -48,7 +48,7 @@ public class _editarexp extends oracle.jsp.runtime.HttpJsp {
 
       out.write(__jsp_StaticText.text[0]);
       out.write(__jsp_StaticText.text[1]);
-      /*@lineinfo:translated-code*//*@lineinfo:16^1*/      {
+      /*@lineinfo:translated-code*//*@lineinfo:17^1*/      {
         org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setAction("/editarexp");
@@ -58,9 +58,10 @@ public class _editarexp extends oracle.jsp.runtime.HttpJsp {
           do {
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[2]);
-            /*@lineinfo:translated-code*//*@lineinfo:17^44*/            {
-              org.apache.struts.taglib.html.TextTag __jsp_taghandler_2=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
+            /*@lineinfo:translated-code*//*@lineinfo:18^44*/            {
+              org.apache.struts.taglib.html.TextTag __jsp_taghandler_2=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag onkeypress property styleClass");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
+              __jsp_taghandler_2.setOnkeypress("EvaluateText('%d', this)");
               __jsp_taghandler_2.setProperty("cod");
               __jsp_taghandler_2.setStyleClass("form-control");
               __jsp_tag_starteval=__jsp_taghandler_2.doStartTag();
@@ -77,7 +78,7 @@ public class _editarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[3]);
-            /*@lineinfo:translated-code*//*@lineinfo:19^1*/            {
+            /*@lineinfo:translated-code*//*@lineinfo:20^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_3=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag styleClass value");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setStyleClass("btn btn-info");
@@ -96,7 +97,7 @@ public class _editarexp extends oracle.jsp.runtime.HttpJsp {
             }
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[4]);
-          /*@lineinfo:translated-code*//*@lineinfo:19^59*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+          /*@lineinfo:translated-code*//*@lineinfo:20^59*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
@@ -128,7 +129,7 @@ public class _editarexp extends oracle.jsp.runtime.HttpJsp {
       text[0] = 
       "\n".toCharArray();
       text[1] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nExoposicion\n</title>\n</head>\n<body>\n<h2>\nEditar Exposicion\n</h2><br>\n\n".toCharArray();
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/valida.js\"></script>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nExoposicion\n</title>\n</head>\n<body>\n<h2>\nEditar Exposicion\n</h2><br>\n\n".toCharArray();
       text[2] = 
       "\n<h5>Ingrese el Codigo de Exposicion: </h5> ".toCharArray();
       text[3] = 

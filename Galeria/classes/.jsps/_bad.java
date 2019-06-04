@@ -75,9 +75,9 @@ public class _bad extends oracle.jsp.runtime.HttpJsp {
     static {
       try {
       text[0] = 
-      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nError! ".toCharArray();
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nError\n</title>\n</head>\n<body>\n<center><h2>\nError! ".toCharArray();
       text[1] = 
-      "\n</h2>\n<h3>Intentelo Mas Tarde..</h3>\n<p>\n".toCharArray();
+      "\n</h2>\n<h3>Intentelo Mas Tarde..</h3></center>\n<p>\n".toCharArray();
       text[2] = 
       "</p>\n</body>\n</html>\n".toCharArray();
       }
