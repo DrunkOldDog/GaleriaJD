@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.text.DateFormat;
 
 
-public class _compras extends com.orionserver.http.OrionHttpJspPage {
+public class _compras extends oracle.jsp.runtime.HttpJsp {
 
   public final String _globalsClassName = null;
 
@@ -33,39 +33,44 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
+    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
+      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
+      JspFactory.getDefaultFactory().releasePageContext(pageContext);
+      return;
+}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _compras page = this;
     ServletConfig config = pageContext.getServletConfig();
 
-    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      __ojsp_s_out.write(__jsp_StaticText.text[0]);
-      __ojsp_s_out.write(__jsp_StaticText.text[1]);
-      __ojsp_s_out.write(__jsp_StaticText.text[2]);
-      __ojsp_s_out.write(__jsp_StaticText.text[3]);
-      /*@lineinfo:user-code*//*@lineinfo:18^1*/      
+      out.write(__jsp_StaticText.text[0]);
+      out.write(__jsp_StaticText.text[1]);
+      out.write(__jsp_StaticText.text[2]);
+      out.write(__jsp_StaticText.text[3]);
+      /*@lineinfo:user-code*//*@lineinfo:19^1*/      
          DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
          Calendar cal = Calendar.getInstance();           
       
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[4]);
-      /*@lineinfo:translated-code*//*@lineinfo:22^1*/      {
-        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
+      out.write(__jsp_StaticText.text[4]);
+      /*@lineinfo:translated-code*//*@lineinfo:23^1*/      {
+        org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action onsubmit");
         __jsp_taghandler_1.setParent(null);
         __jsp_taghandler_1.setAction("/compras");
+        __jsp_taghandler_1.setOnsubmit("return fParams( )");
         __jsp_tag_starteval=__jsp_taghandler_1.doStartTag();
         if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
         {
           do {
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[5]);
-            /*@lineinfo:translated-code*//*@lineinfo:24^8*/            {
+            out.write(__jsp_StaticText.text[5]);
+            /*@lineinfo:translated-code*//*@lineinfo:25^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_2=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
               __jsp_taghandler_2.setKey("nombre.promp");
@@ -80,8 +85,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[6]);
-            /*@lineinfo:translated-code*//*@lineinfo:25^1*/            {
+            out.write(__jsp_StaticText.text[6]);
+            /*@lineinfo:translated-code*//*@lineinfo:26^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_3=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
               __jsp_taghandler_3.setProperty("nombre");
@@ -90,19 +95,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_3,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[7]);
-            /*@lineinfo:translated-code*//*@lineinfo:26^8*/            {
+            out.write(__jsp_StaticText.text[7]);
+            /*@lineinfo:translated-code*//*@lineinfo:27^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_4=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
               __jsp_taghandler_4.setKey("apellido.promp");
@@ -117,8 +120,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[8]);
-            /*@lineinfo:translated-code*//*@lineinfo:27^1*/            {
+            out.write(__jsp_StaticText.text[8]);
+            /*@lineinfo:translated-code*//*@lineinfo:28^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_5=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
               __jsp_taghandler_5.setProperty("apellido");
@@ -127,19 +130,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_5,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_5.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_5.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[9]);
-            /*@lineinfo:translated-code*//*@lineinfo:28^8*/            {
+            out.write(__jsp_StaticText.text[9]);
+            /*@lineinfo:translated-code*//*@lineinfo:29^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_6=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
               __jsp_taghandler_6.setKey("ci.promp");
@@ -154,8 +155,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[10]);
-            /*@lineinfo:translated-code*//*@lineinfo:29^1*/            {
+            out.write(__jsp_StaticText.text[10]);
+            /*@lineinfo:translated-code*//*@lineinfo:30^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_7=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
               __jsp_taghandler_7.setProperty("ci");
@@ -164,19 +165,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_7,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[11]);
-            /*@lineinfo:translated-code*//*@lineinfo:30^8*/            {
+            out.write(__jsp_StaticText.text[11]);
+            /*@lineinfo:translated-code*//*@lineinfo:31^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_8=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_8.setParent(__jsp_taghandler_1);
               __jsp_taghandler_8.setKey("fec_nac.promp");
@@ -191,8 +190,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[12]);
-            /*@lineinfo:translated-code*//*@lineinfo:31^1*/            {
+            out.write(__jsp_StaticText.text[12]);
+            /*@lineinfo:translated-code*//*@lineinfo:32^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_9=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property styleClass");
               __jsp_taghandler_9.setParent(__jsp_taghandler_1);
               __jsp_taghandler_9.setProperty("fec_nac");
@@ -201,19 +200,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_9,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_9.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_9.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_9);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[13]);
-            /*@lineinfo:translated-code*//*@lineinfo:34^8*/            {
+            out.write(__jsp_StaticText.text[13]);
+            /*@lineinfo:translated-code*//*@lineinfo:35^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_10=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_10.setParent(__jsp_taghandler_1);
               __jsp_taghandler_10.setKey("fecha.promp");
@@ -228,8 +225,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_10);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[14]);
-            /*@lineinfo:translated-code*//*@lineinfo:35^1*/            {
+            out.write(__jsp_StaticText.text[14]);
+            /*@lineinfo:translated-code*//*@lineinfo:36^1*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_11=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property readonly styleClass value");
               __jsp_taghandler_11.setParent(__jsp_taghandler_1);
               __jsp_taghandler_11.setProperty("fecha");
@@ -240,19 +237,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_11,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_11.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_11.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_11);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[15]);
-            /*@lineinfo:translated-code*//*@lineinfo:36^8*/            {
+            out.write(__jsp_StaticText.text[15]);
+            /*@lineinfo:translated-code*//*@lineinfo:37^8*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_12=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_12.setParent(__jsp_taghandler_1);
               __jsp_taghandler_12.setKey("obra.promp");
@@ -267,8 +262,8 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_12);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[16]);
-            /*@lineinfo:translated-code*//*@lineinfo:37^1*/            {
+            out.write(__jsp_StaticText.text[16]);
+            /*@lineinfo:translated-code*//*@lineinfo:38^1*/            {
               org.apache.struts.taglib.html.SelectTag __jsp_taghandler_13=(org.apache.struts.taglib.html.SelectTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SelectTag.class,"org.apache.struts.taglib.html.SelectTag property styleClass");
               __jsp_taghandler_13.setParent(__jsp_taghandler_1);
               __jsp_taghandler_13.setProperty("obras");
@@ -277,11 +272,10 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_13,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                   /*@lineinfo:generated-code*/
-                  __ojsp_s_out.write(__jsp_StaticText.text[17]);
-                  /*@lineinfo:translated-code*//*@lineinfo:38^11*/                  {
+                  out.write(__jsp_StaticText.text[17]);
+                  /*@lineinfo:translated-code*//*@lineinfo:39^11*/                  {
                     org.apache.struts.taglib.html.OptionsTag __jsp_taghandler_14=(org.apache.struts.taglib.html.OptionsTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.OptionsTag.class,"org.apache.struts.taglib.html.OptionsTag collection labelProperty property");
                     __jsp_taghandler_14.setParent(__jsp_taghandler_13);
                     __jsp_taghandler_14.setCollection("ayuda");
@@ -298,18 +292,17 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
                     OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_14);
                   }
                   /*@lineinfo:generated-code*/
-                  __ojsp_s_out.write(__jsp_StaticText.text[18]);
-                /*@lineinfo:translated-code*//*@lineinfo:38^86*/                } while (__jsp_taghandler_13.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                  out.write(__jsp_StaticText.text[18]);
+                /*@lineinfo:translated-code*//*@lineinfo:39^86*/                } while (__jsp_taghandler_13.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_13.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_13);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[19]);
-            /*@lineinfo:translated-code*//*@lineinfo:41^1*/            {
+            out.write(__jsp_StaticText.text[19]);
+            /*@lineinfo:translated-code*//*@lineinfo:42^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_15=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag styleClass value");
               __jsp_taghandler_15.setParent(__jsp_taghandler_1);
               __jsp_taghandler_15.setStyleClass("btn btn-success");
@@ -318,29 +311,27 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_15,__jsp_tag_starteval,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_15.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_15.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_15);
             }
             /*@lineinfo:generated-code*/
-            __ojsp_s_out.write(__jsp_StaticText.text[20]);
-          /*@lineinfo:translated-code*//*@lineinfo:41^69*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            out.write(__jsp_StaticText.text[20]);
+          /*@lineinfo:translated-code*//*@lineinfo:42^69*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[21]);
-      /*@lineinfo:user-code*//*@lineinfo:44^1*/      out.print( new java.util.Date() );
+      out.write(__jsp_StaticText.text[21]);
+      /*@lineinfo:user-code*//*@lineinfo:45^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[22]);
+      out.write(__jsp_StaticText.text[22]);
 
 
     }
@@ -359,55 +350,55 @@ public class _compras extends com.orionserver.http.OrionHttpJspPage {
 
   }
   private static class __jsp_StaticText {
-    private static final byte text[][]=new byte[23][];
+    private static final char text[][]=new char[23][];
     static {
       try {
       text[0] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[1] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[2] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[3] = 
-      "\r\n<html>\r\n<head>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/estilo.css\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nHello World\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nFormulario de Compra\r\n</h2>\r\n".getBytes("Cp1252");
+      "\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<link type=\"text/css\" rel=\"stylesheet\" href=\"css/estilo.css\">\n<script type=\"text/javascript\" language=\"JavaScript\" src=\"js/sort.js\"></script>\t\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nFormulario de Compra\n</h2>\n".toCharArray();
       text[4] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[5] = 
-      "\r\n<h4>Datos Cliente</h4>\r\n<label>".getBytes("Cp1252");
+      "\n<h4>Datos Cliente</h4>\n<label>".toCharArray();
       text[6] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[7] = 
-      "\r\n<label>".getBytes("Cp1252");
+      "\n<label>".toCharArray();
       text[8] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[9] = 
-      "\r\n<label>".getBytes("Cp1252");
+      "\n<label>".toCharArray();
       text[10] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[11] = 
-      "\r\n<label>".getBytes("Cp1252");
+      "\n<label>".toCharArray();
       text[12] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[13] = 
-      "\r\n<p></p>\r\n<h4>Datos Compra</h4>\r\n<label>".getBytes("Cp1252");
+      "\n<p></p>\n<h4>Datos Compra</h4>\n<label>".toCharArray();
       text[14] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[15] = 
-      "\r\n<label>".getBytes("Cp1252");
+      "\n<label>".toCharArray();
       text[16] = 
-      "</label>\r\n".getBytes("Cp1252");
+      "</label>\n".toCharArray();
       text[17] = 
-      "\r\n          ".getBytes("Cp1252");
+      "\n          ".toCharArray();
       text[18] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[19] = 
-      "\r\n<p></p>\r\n".getBytes("Cp1252");
+      "\n<p></p>\n".toCharArray();
       text[20] = 
-      "\r\n".getBytes("Cp1252");
+      "\n".toCharArray();
       text[21] = 
-      "\r\n<p>\r\n".getBytes("Cp1252");
+      "\n<p>\n".toCharArray();
       text[22] = 
-      "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
+      "</p>\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {
         System.err.println(th);

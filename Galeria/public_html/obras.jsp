@@ -5,7 +5,7 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+<link type="text/css" rel="stylesheet" href="css/estilo.css">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Hello World
@@ -14,11 +14,11 @@ Hello World
 <body>
 <h2>Obras en Exposicion:</h2>
 <html:form action="/obras">
-<table class="table table-striped">
+<table id="myTable" class="table table-striped">
 <thead>
     <tr>
-      <th scope="col">Exposicion</th>
-      <th scope="col">#ID Obra</th>
+      <th onclick="sortTable(this)" scope="col">Exposicion</th>
+      <th onclick="sortTable(1)" scope="col">#ID Obra</th>
       <th scope="col">Obra</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Precio</th>
