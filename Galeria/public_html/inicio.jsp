@@ -20,6 +20,7 @@ Bienvenido <%=session.getAttribute("fn")%>&nbsp;<%=session.getAttribute("ln")%>
   <html:submit styleClass="btn btn-secondary" property="boton" value="Compras" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Ventas" />
   <html:submit styleClass="btn btn-secondary" property="boton" value="Exposiciones Pasadas" />
+  <a class="btn btn-danger" href="login.jsp" role="button">Salir</a>
 </html:form>
 
 <p>
