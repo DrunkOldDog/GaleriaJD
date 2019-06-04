@@ -21,20 +21,20 @@ Formulario de Compra
 %>
 <html:form action="/compras">
 <h4>Datos Cliente</h4>
-<bean:message key="nombre.promp" />
-<html:text property="nombre" />
-<bean:message key="apellido.promp" />
-<html:text property="apellido" />
-<bean:message key="ci.promp" />
-<html:text property="ci" />
-<bean:message key="fec_nac.promp" />
-<html:text property="fec_nac" />
+<label><bean:message key="nombre.promp" /></label>
+<html:text styleClass="form-control" property="nombre" />
+<label><bean:message key="apellido.promp" /></label>
+<html:text styleClass="form-control" property="apellido" />
+<label><bean:message key="ci.promp" /></label>
+<html:text styleClass="form-control" property="ci" />
+<label><bean:message key="fec_nac.promp" /></label>
+<html:text styleClass="form-control" property="fec_nac" />
 <p></p>
 <h4>Datos Compra</h4>
-<bean:message key="fecha.promp" />
-<html:text property="fecha" value="<%=dateFormat.format(cal.getTime())%>" readonly="TRUE" />
-<bean:message key="obra.promp" />
-<html:select property="obras">
+<label><bean:message key="fecha.promp" /></label>
+<html:text styleClass="form-control" property="fecha" value="<%=dateFormat.format(cal.getTime())%>" readonly="TRUE" />
+<label><bean:message key="obra.promp" /></label>
+<html:select styleClass="form-control" property="obras">
           <html:options collection="ayuda" property="codigo" labelProperty="descr" />
 </html:select>
 <p></p>

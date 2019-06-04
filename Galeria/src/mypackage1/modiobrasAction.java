@@ -16,8 +16,7 @@ import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
 
-
-public class editobrasAction extends Action 
+public class modiobrasAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -28,32 +27,22 @@ public class editobrasAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-    editobrasActionForm cc = (editobrasActionForm) form;
+    modiobrasActionForm cc = (modiobrasActionForm) form;
     String cod = cc.getCodigo();
+    String tit = cc.getTitulo();
+    String des = cc.getDescripcion();
+    String pre = cc.getPrecio();
     
     Connection cn = null;
     ConnectDB conn =new ConnectDB();
     ResultSet rsConsulta = null;
-
        try
        {
          cn = conn.conexion;
-         String cadena = "select o.idobra,o.titulo,o.descripcion,o.precio,e.titulo as EXPOSICION,p.nombre,p.apellido from jd_obra o, jd_propietario p,jd_exposicion e, jd_expobra ex where o.idpropietario = p.idpropietario and o.vendida=0 and e.idexposicion = ex.idexposicion and o.idobra = ex.idobra and o.IDOBRA ="+cod;
+         String cadena = "update jd_obra set TITULO='"+tit+"',DESCRIPCION='"+des+"',PRECIO="+pre+" where IDOBRA="+cod;
          System.out.println(cadena);
-         rsConsulta = conn.getData(cadena);
-         if(rsConsulta.next()){
-         request.getSession().setAttribute("ocod",rsConsulta.getString("IDOBRA"));
-         request.getSession().setAttribute("otit",rsConsulta.getString("TITULO"));
-         request.getSession().setAttribute("odes",rsConsulta.getString("DESCRIPCION"));
-         request.getSession().setAttribute("opre",rsConsulta.getString("PRECIO"));
-         request.getSession().setAttribute("oexp",rsConsulta.getString("EXPOSICION"));
-         request.getSession().setAttribute("onom",rsConsulta.getString("NOMBRE")+" "+rsConsulta.getString("APELLIDO"));
-         }else{
-              request.getSession().setAttribute("error","La Obra con el ID: "+cod+" ya fue vendida o no se encuentra disponible");
-              return mapping.findForward("malo");
-         }
-         System.out.println("done mfdkasdas");
-         return mapping.findForward("editar");
+         int a = conn.InsertaDatos(cadena);
+         return mapping.findForward("bueno");
 	      }
 	
         catch(Exception e)

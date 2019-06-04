@@ -113,7 +113,8 @@ public class obrasAction extends Action
       {
         conn.closeConnection();	
       }
+  }else{
+      return mapping.findForward("editobras");
   }
-    return mapping.findForward("success");
   }
 }

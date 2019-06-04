@@ -16,7 +16,6 @@ Hello World
 <table class="table table-striped">
 <thead>
     <tr>
-      <th scope="col">#ID Exposicion</th>
       <th scope="col">Exposicion</th>
       <th scope="col">#ID Obra</th>
       <th scope="col">Obra</th>
@@ -26,11 +25,11 @@ Hello World
       <th scope="col">Tipo de Obra</th>
       <th scope="col">Salon</th>
       <th scope="col">Artista</th>
+      <th scope="col">Propietario Actual</th>
     </tr>
   </thead>
   <logic:iterate id="tabla" indexId="index" name="nn" property="tabla" >
             <tr>
-              <td><bean:write name="tabla" property="idcompra"/></td>
               <td><bean:write name="tabla" property="fecha" /></td>
               <td><bean:write name="tabla" property="apecli" /></td>
               <td><bean:write name="tabla" property="nomobr" /></td>
@@ -40,6 +39,7 @@ Hello World
               <td><bean:write name="tabla" property="apeemp" /></td>
               <td><bean:write name="tabla" property="nomemp" /></td>
               <td><bean:write name="tabla" property="nomcli" /></td>
+              <td><bean:write name="tabla" property="idcompra"/></td>
             </tr>
   </logic:iterate>
   </table>

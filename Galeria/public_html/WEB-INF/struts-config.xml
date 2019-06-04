@@ -18,6 +18,7 @@
     <form-bean name="editarartActionForm" type="mypackage1.editarartActionForm"/>
     <form-bean name="modiartActionForm" type="mypackage1.modiartActionForm"/>
     <form-bean name="agregarartActionForm" type="mypackage1.agregarartActionForm"/>
+    <form-bean name="modiobrasActionForm" type="mypackage1.modiobrasActionForm"/>
   </form-beans>
   <action-mappings>
     <action path="/inicio" name="inicioActionForm" type="mypackage1.inicioAction">
@@ -41,8 +42,6 @@
      <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
-
-    
     <action path="/editarexp" name="editarexpActionForm" type="mypackage1.editarexpAction">
     <forward name="editarex" path="/editexp.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
@@ -57,13 +56,17 @@
     </action>
     <action path="/obras" name="obrasActionForm" type="mypackage1.obrasAction">
       <forward name="addobras" path="/addobra.jsp"/>
+      <forward name="editobras" path="/editobras.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
     <action path="/addobra" name="addobraActionForm" type="mypackage1.addobraAction">
       <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>
-    <action path="/editobras" name="editobrasActionForm" type="mypackage1.editobrasAction"/>
+    <action path="/editobras" name="editobrasActionForm" type="mypackage1.editobrasAction">
+          <forward name="editar" path="/modiobras.jsp"/>
+          <forward name="malo" path="/bad.jsp"/>
+    </action>
     <action path="/art" name="artistasActionForm" type="mypackage1.artistasAction"/>
     
     <action path="/buscarart" name="editarartActionForm" type="mypackage1.editarartAction">
@@ -75,6 +78,10 @@
       <forward name="malo" path="/bad.jsp"/>
     </action>
     <action path="/agregarart" name="agregarartActionForm" type="mypackage1.agregarartAction">
+      <forward name="bueno" path="/inicio.jsp"/>
+      <forward name="malo" path="/bad.jsp"/>
+    </action>
+    <action path="/editar" name="modiobrasActionForm" type="mypackage1.modiobrasAction">
       <forward name="bueno" path="/inicio.jsp"/>
       <forward name="malo" path="/bad.jsp"/>
     </action>

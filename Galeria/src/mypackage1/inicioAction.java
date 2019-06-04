@@ -137,14 +137,13 @@ public class inicioAction extends Action
     try
     {
       cn = conn.conexion;
-      String cadena = "select e.idexposicion, e.titulo as EXPOSICION, o.idobra, o.titulo, o.descripcion, o.precio, es.nombre as ESTILO, t.nombre as TIPO_OBRA, s.nombre as SALON, a.nombre, a.apellido from jd_exposicion e, jd_obra o, jd_estilo es, jd_tipo_obra t, jd_salon s, jd_artista a, jd_expobra eo, jd_artobra ao where ao.idartista = a.idartista and ao.idobra = o.idobra and eo.idobra = o.idobra and eo.idexposicion = e.idexposicion and eo.idsalon = s.idsalon and o.idestilo = es.idestilo and o.idtipo_obra = t.idtipo_obra and e.estado = 1 and e.fec_cie >= CURRENT_DATE order by 1";
+      String cadena = "select e.titulo as EXPOSICION, o.idobra, o.titulo, o.descripcion, o.precio, es.nombre as ESTILO, t.nombre as TIPO_OBRA, s.nombre as SALON, a.nombre, a.apellido, p.nombre as NOMP, p.apellido as APEP from jd_exposicion e, jd_obra o, jd_estilo es, jd_tipo_obra t, jd_salon s, jd_artista a, jd_expobra eo, jd_artobra ao, jd_propietario p where ao.idartista = a.idartista and ao.idobra = o.idobra and eo.idobra = o.idobra and eo.idexposicion = e.idexposicion and eo.idsalon = s.idsalon and o.idestilo = es.idestilo and o.idtipo_obra = t.idtipo_obra and p.idpropietario = o.idpropietario and e.estado = 1 and e.fec_cie >= CURRENT_DATE order by 1";
       rsConsulta = conn.getData(cadena);
       System.out.println(cadena);
       ArrayList items = new ArrayList();
       while (rsConsulta.next())
       {
         ClaseDep item = new ClaseDep();
-        item.setIdcompra(rsConsulta.getString("IDEXPOSICION"));
         item.setFecha(rsConsulta.getString("EXPOSICION"));
         item.setApecli(rsConsulta.getString("IDOBRA"));
         item.setNomobr(rsConsulta.getString("TITULO"));
@@ -154,6 +153,7 @@ public class inicioAction extends Action
         item.setApeemp(rsConsulta.getString("TIPO_OBRA"));
         item.setNomemp(rsConsulta.getString("SALON"));
         item.setNomcli(rsConsulta.getString("NOMBRE")+" "+rsConsulta.getString("APELLIDO"));
+        item.setIdcompra(rsConsulta.getString("NOMP")+" "+rsConsulta.getString("APEP"));
         items.add(item);
         System.out.println("Paso ..");
     }
