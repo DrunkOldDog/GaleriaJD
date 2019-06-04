@@ -226,7 +226,7 @@ if(boton.equals("Exposiciones Pasadas")) {
       try
       {
         cn = conn.conexion;
-        String cadena = "select * from jd_obra order by 1";
+        String cadena = "select o.idobra,o.titulo,o.precio from jd_obra o ,jd_exposicion e, jd_expobra ex where o.idobra=ex.idobra and e.idexposicion=ex.idexposicion and CURRENT_DATE <= e.fec_cie and o.vendida=0 order by 1";
         rsConsulta = conn.getData(cadena);
         ArrayList items = new ArrayList();
         while (rsConsulta.next())

@@ -36,6 +36,7 @@ public class comprasAction extends Action
     String fen = cc.getFec_nac();
     String obrisha = null;
     int valorc = 0;
+    int valprop = 0;
     
     Connection cn = null;
     ConnectDB conn =new ConnectDB();
@@ -73,8 +74,17 @@ public class comprasAction extends Action
         rsConsulta = conn.getData(cadena);
         if (rsConsulta.next()){
            obrisha = rsConsulta.getString("PRECIO");
+           valprop = Integer.parseInt(rsConsulta.getString("IDPROPIETARIO"));
            System.out.println(obrisha);
         }
+
+        cadena = "update jd_obra set VENDIDA=1 where IDOBRA="+obr;
+        System.out.println(cadena);
+        int b = conn.InsertaDatos(cadena);
+
+        cadena = "update jd_propietario set NOMBRE='"+nom+"', APELLIDO='"+ape+"' where IDPROPIETARIO="+valprop;
+        System.out.println(cadena);
+        int c = conn.InsertaDatos(cadena);
 
         cadena="SELECT * FROM JD_COMPRA WHERE IDCOMPRA = (SELECT MAX(IDCOMPRA) FROM JD_COMPRA)";
         System.out.println(cadena);
